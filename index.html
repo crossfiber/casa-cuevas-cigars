@@ -545,12 +545,12 @@
             width: 100%;
             height: 100vh;
             min-height: 600px;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(17, 17, 17, 0.4) 100%), url('img/intro-bg.jpg') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.55) 0%, rgba(17, 17, 17, 0.35) 100%), url('img/intro-bg.jpg') center 30%/cover no-repeat;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
             color: var(--white-warm);
-            padding: 120px 2rem 2rem;
+            padding: 80px 1.25rem 100px;
             text-align: center;
             overflow: hidden;
             margin-top: 70px;
@@ -560,6 +560,8 @@
             .hero {
                 text-align: left;
                 justify-content: flex-start;
+                align-items: center;
+                background-position: center 20%;
                 padding: 120px 5rem 2rem;
                 margin-top: 0;
             }
@@ -641,21 +643,9 @@
             color: var(--accent-gold);
         }
 
-        /* ===== INTERACTIVE TOBACCO MAP ===== */
+        /* ===== INTERACTIVE TOBACCO MAP (hidden) ===== */
         .tobacco-map {
-            position: absolute;
-            top: 50%;
-            right: 5%;
-            transform: translateY(-50%);
-            width: 300px;
-            height: 200px;
-            display: none;
-        }
-
-        @media (min-width: 1024px) {
-            .tobacco-map {
-                display: block;
-            }
+            display: none !important;
         }
 
         .map-dot {
