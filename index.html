@@ -1,0 +1,2751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casa Cuevas Cigars - Four generations of premium handcrafted cigars from Santiago, Dominican Republic. Connecticut, Habano, Maduro, Reserva and La Mandarria blends. Find a retailer near you. Call (786) 565-7977.">
+    <meta name="keywords" content="premium cigars, Dominican cigars, handcrafted cigars, Casa Cuevas, cigar retailer, Miami">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Casa Cuevas Cigars">
+    <meta name="geo.placename" content="Miami, Florida">
+    <meta name="geo.position" content="25.8753,-80.2179">
+    <meta name="ICBM" content="25.8753,-80.2179">
+    <link rel="canonical" href="https://casacuevascigars.com">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Casa Cuevas Cigars | Premium Handcrafted Dominican Cigars | Miami, FL">
+    <meta property="og:description" content="Four generations of premium handcrafted cigars from Santiago, Dominican Republic. Connecticut, Habano, Maduro, Reserva and La Mandarria blends.">
+    <meta property="og:image" content="http://www.casacuevascigars.com/img/intro-bg.jpg">
+    <meta property="og:url" content="https://casacuevascigars.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Casa Cuevas Cigars">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Casa Cuevas Cigars | Premium Handcrafted Dominican Cigars">
+    <meta name="twitter:description" content="Four generations of premium handcrafted cigars. Connecticut, Habano, Maduro, Reserva and La Mandarria blends.">
+    <meta name="twitter:image" content="http://www.casacuevascigars.com/img/intro-bg.jpg">
+    <meta name="twitter:site" content="@casacuevascigar">
+
+    <title>Casa Cuevas Cigars | Premium Handcrafted Dominican Cigars | Miami, FL</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
+            background-color: #000000;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Color Variables - matching original Casa Cuevas palette */
+        :root {
+            --dark-primary: #000000;
+            --dark-secondary: #111111;
+            --accent-gold: #F4D03F;
+            --accent-hover: #c3a632;
+            --cream-light: #f9f5e8;
+            --body-text: #ffffff;
+            --white-warm: #ffffff;
+            --red-accent: #8B2500;
+            --glass-border: rgba(244, 208, 63, 0.2);
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: var(--white-warm);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--body-text);
+        }
+
+        a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            border: 2px solid var(--accent-gold);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: var(--dark-primary);
+            border-color: var(--accent-gold);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(244, 208, 63, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(244, 208, 63, 0.1);
+            border-color: var(--accent-hover);
+            color: var(--accent-hover);
+        }
+
+        .btn-small {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* ===== GLASSMORPHISM ===== */
+        .glass-card {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        /* ===== SECTION DECORATION ===== */
+        .section-heading {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        .section-heading h2 {
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-gold) 0%, rgba(244, 208, 63, 0) 100%);
+            border-radius: 2px;
+        }
+
+        /* ===== AGE VERIFICATION GATE ===== */
+        .age-gate {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .age-gate.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .age-gate-content {
+            background: rgba(17, 17, 17, 0.8);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 400px;
+            animation: slideUp 0.6s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .age-gate-content img {
+            max-width: 150px;
+            margin-bottom: 2rem;
+        }
+
+        .age-gate-content h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .age-gate-content p {
+            margin-bottom: 2rem;
+            color: var(--body-text);
+        }
+
+        .age-gate-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+
+        @media (min-width: 480px) {
+            .age-gate-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .age-gate-buttons .btn {
+            flex: 1;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 2rem;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-logo img {
+            height: 45px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        @media (min-width: 1024px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-links a {
+            color: var(--body-text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-phone {
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        @media (min-width: 1024px) {
+            .nav-phone {
+                display: flex;
+            }
+        }
+
+        .nav-phone i {
+            font-size: 1.2rem;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            width: 30px;
+            height: 24px;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+
+        @media (min-width: 1024px) {
+            .hamburger {
+                display: none;
+            }
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-gold);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* ===== MOBILE DRAWER ===== */
+        .nav-drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.98);
+            backdrop-filter: blur(10px);
+            border-left: 1px solid var(--glass-border);
+            z-index: 999;
+            transform: translateX(100%);
+            transition: transform 0.4s ease;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-drawer.open {
+            transform: translateX(0);
+        }
+
+        .drawer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .drawer-logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .drawer-close {
+            background: none;
+            border: none;
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .drawer-close:hover {
+            color: var(--accent-hover);
+        }
+
+        .drawer-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .drawer-nav a {
+            color: var(--body-text);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            animation: slideInDrawer 0.5s ease backwards;
+        }
+
+        .drawer-nav a:nth-child(1) { animation-delay: 0.1s; }
+        .drawer-nav a:nth-child(2) { animation-delay: 0.2s; }
+        .drawer-nav a:nth-child(3) { animation-delay: 0.3s; }
+        .drawer-nav a:nth-child(4) { animation-delay: 0.4s; }
+        .drawer-nav a:nth-child(5) { animation-delay: 0.5s; }
+        .drawer-nav a:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes slideInDrawer {
+            from {
+                transform: translateX(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .drawer-nav a:hover {
+            color: var(--accent-gold);
+            padding-left: 10px;
+        }
+
+        .drawer-footer {
+            border-top: 1px solid var(--glass-border);
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .drawer-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .drawer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .drawer-social a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(244, 208, 63, 0.1);
+            border-radius: 50%;
+            color: var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .drawer-social a:hover {
+            background: rgba(244, 208, 63, 0.2);
+            transform: scale(1.1);
+        }
+
+        .nav-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: 998;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-backdrop.active {
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 600px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(17, 17, 17, 0.4) 100%), url('http://www.casacuevascigars.com/img/intro-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white-warm);
+            padding: 120px 2rem 2rem;
+            text-align: center;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                text-align: left;
+                justify-content: flex-start;
+                padding: 120px 5rem 2rem;
+                margin-top: 0;
+            }
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 10;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-logo {
+            max-width: 250px;
+            margin: 2rem 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 480px) {
+            .hero-ctas {
+                flex-direction: row;
+            }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        .scroll-indicator i {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+        }
+
+        /* ===== INTERACTIVE TOBACCO MAP ===== */
+        .tobacco-map {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            width: 300px;
+            height: 200px;
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .tobacco-map {
+                display: block;
+            }
+        }
+
+        .map-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .map-dot::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        .map-dot:nth-child(1) { top: 20%; left: 45%; animation-delay: 0s; }
+        .map-dot:nth-child(2) { top: 35%; left: 40%; animation-delay: 0.2s; }
+        .map-dot:nth-child(3) { top: 50%; left: 35%; animation-delay: 0.4s; }
+        .map-dot:nth-child(4) { top: 45%; left: 50%; animation-delay: 0.6s; }
+        .map-dot:nth-child(5) { top: 60%; left: 48%; animation-delay: 0.8s; }
+        .map-dot:nth-child(6) { top: 65%; left: 30%; animation-delay: 1s; }
+        .map-dot:nth-child(7) { top: 55%; left: 25%; animation-delay: 1.2s; }
+        .map-dot:nth-child(8) { top: 70%; left: 50%; animation-delay: 1.4s; }
+        .map-dot:nth-child(9) { top: 25%; left: 55%; animation-delay: 1.6s; }
+        .map-dot:nth-child(10) { top: 75%; left: 60%; animation-delay: 1.8s; }
+
+        .map-label {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--glass-border);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            font-weight: 600;
+        }
+
+        .map-dot:hover ~ .map-label,
+        .map-label:hover {
+            opacity: 1;
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            margin-top: -120px;
+            position: relative;
+            z-index: 50;
+            padding: 0 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .stats-bar {
+                margin-top: -80px;
+            }
+        }
+
+        .stats-container {
+            background: rgba(0, 0, 0, 0.85);
+            border: 1px solid rgba(244, 208, 63, 0.3);
+            backdrop-filter: blur(15px);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .stats-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            counter-increment: stat-counter;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--body-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== MAIN CONTAINER ===== */
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            section {
+                padding: 6rem 3rem;
+            }
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background: linear-gradient(to bottom, #F4D03F 70%, #c3a632 100%);
+            color: #333;
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .about > * {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .about > * {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+
+        .about h2, .about .section-heading h2 {
+            color: #000 !important;
+        }
+
+        .about .section-heading::after {
+            background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
+        }
+
+        .about p, .about .about-content {
+            color: #333;
+        }
+
+        .about .btn-primary {
+            background-color: #000;
+            color: #F4D03F;
+            border-color: #000;
+        }
+
+        .about .btn-primary:hover {
+            background-color: #222;
+            border-color: #222;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-highlight {
+            background: rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #000;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 6px;
+            font-style: italic;
+            color: #222;
+        }
+
+        .about-image {
+            position: relative;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid #000;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ===== PRODUCTS SECTION ===== */
+        .products {
+            background: #111;
+            max-width: 100%;
+        }
+
+        .products > * {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .product-card {
+            background: rgba(20, 20, 20, 0.9);
+            border: 1px solid rgba(244, 208, 63, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 20px 40px rgba(244, 208, 63, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-gold);
+            color: var(--dark-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            z-index: 10;
+        }
+
+        .product-badge.limited {
+            background: var(--red-accent);
+            color: var(--white-warm);
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-name {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--white-warm);
+        }
+
+        .product-specs {
+            background: rgba(244, 208, 63, 0.05);
+            border-left: 3px solid var(--accent-gold);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            border-radius: 4px;
+        }
+
+        .spec-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .spec-label {
+            font-weight: 600;
+            color: var(--accent-gold);
+        }
+
+        .strength-indicator {
+            display: flex;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+
+        .strength-label {
+            font-size: 0.85rem;
+            color: var(--body-text);
+            margin-right: 0.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .strength-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-gold);
+        }
+
+        .strength-dot.empty {
+            background: rgba(244, 208, 63, 0.3);
+        }
+
+        .product-sizes {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            color: var(--body-text);
+        }
+
+        .product-sizes strong {
+            color: var(--accent-gold);
+        }
+
+        .product-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* ===== FACTORY SECTION ===== */
+        .factory {
+            background: linear-gradient(135deg, rgba(17, 17, 17, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%), url('http://www.casacuevascigars.com/img/factory-bg.jpg') center/cover no-repeat fixed;
+            color: var(--white-warm);
+            position: relative;
+            max-width: 100%;
+        }
+
+        .factory > * {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .factory::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .factory > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .factory-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .factory-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .pillar-card {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 20px 40px rgba(244, 208, 63, 0.2);
+        }
+
+        .pillar-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-hover) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--dark-primary);
+        }
+
+        .pillar-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .pillar-card p {
+            color: var(--body-text);
+        }
+
+        /* ===== GALLERY SECTION ===== */
+        .gallery {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(17, 17, 17, 0.3) 100%);
+            max-width: 100%;
+        }
+
+        .gallery > * {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            aspect-ratio: 1;
+            cursor: pointer;
+            border: 1px solid var(--glass-border);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            font-size: 2rem;
+            color: var(--accent-gold);
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials {
+            background: linear-gradient(180deg, rgba(17, 17, 17, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+            max-width: 100%;
+        }
+
+        .testimonials > * {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-gold);
+        }
+
+        .testimonial-stars {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--body-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .testimonial-title {
+            color: var(--body-text);
+            font-size: 0.9rem;
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(17, 17, 17, 0.3) 100%);
+            max-width: 100%;
+        }
+
+        .faq > * {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-container {
+            max-width: 800px;
+        }
+
+        .faq-item {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: rgba(17, 17, 17, 0.6);
+            border: none;
+            color: var(--white-warm);
+            padding: 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .faq-question:hover {
+            background: rgba(17, 17, 17, 0.8);
+            color: var(--accent-gold);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            background: rgba(0, 0, 0, 0.5);
+            color: var(--body-text);
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* ===== RETAILER SECTION ===== */
+        .retailers {
+            background: linear-gradient(180deg, rgba(17, 17, 17, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+            max-width: 100%;
+        }
+
+        .retailers > * {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .retailer-content {
+            text-align: center;
+        }
+
+        .retailer-stat {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+        }
+
+        .retailer-stat-label {
+            font-size: 1.1rem;
+            color: var(--body-text);
+            margin-bottom: 3rem;
+        }
+
+        .retailer-selector {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 500px;
+        }
+
+        .retailer-selector label {
+            display: block;
+            color: var(--body-text);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .retailer-selector select {
+            width: 100%;
+            padding: 0.875rem;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--accent-gold);
+            color: var(--white-warm);
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .retailer-selector select:hover {
+            border-color: var(--accent-hover);
+        }
+
+        .retailer-selector select:focus {
+            outline: none;
+            border-color: var(--accent-hover);
+            box-shadow: 0 0 0 3px rgba(244, 208, 63, 0.1);
+        }
+
+        .retailer-message {
+            color: var(--body-text);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            min-height: 50px;
+        }
+
+        .retailer-cta {
+            display: inline-block;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(17, 17, 17, 0.3) 100%);
+            max-width: 100%;
+        }
+
+        .contact > * {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-form {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--body-text);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--glass-border);
+            border-radius: 6px;
+            color: var(--white-warm);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            background: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 0 3px rgba(244, 208, 63, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form .btn {
+            width: 100%;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-block {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .info-block:hover {
+            border-color: var(--accent-gold);
+            box-shadow: 0 8px 24px rgba(244, 208, 63, 0.1);
+        }
+
+        .info-block i {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-right: 1rem;
+            vertical-align: middle;
+        }
+
+        .info-block a {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .info-block a:hover {
+            color: var(--accent-hover);
+        }
+
+        .hours {
+            color: var(--body-text);
+            font-size: 0.95rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-start;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(244, 208, 63, 0.1);
+            border-radius: 50%;
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .social-icons a:hover {
+            background: rgba(244, 208, 63, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(244, 208, 63, 0.2);
+        }
+
+        .map-container {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            overflow: hidden;
+            height: 400px;
+            margin-top: 2rem;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #000000;
+            border-top: 1px solid var(--glass-border);
+            padding: 4rem 2rem 2rem;
+            color: var(--body-text);
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 3rem;
+            gap: 1rem;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            width: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-tagline {
+            color: var(--accent-gold);
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+                text-align: left;
+            }
+        }
+
+        .footer-section h4 {
+            color: var(--white-warm);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: var(--body-text);
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-gold);
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--glass-border);
+            padding-top: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .footer-copyright {
+            font-size: 0.9rem;
+            color: var(--body-text);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(244, 208, 63, 0.1);
+            border-radius: 50%;
+            color: var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: rgba(244, 208, 63, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(244, 208, 63, 0.2);
+        }
+
+        .footer-closing {
+            color: var(--accent-gold);
+            font-weight: 600;
+            font-style: italic;
+            font-size: 1rem;
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in-up.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                padding: 100px 1.5rem 1rem;
+            }
+
+            .stats-bar {
+                margin-top: -80px;
+                padding: 0 1rem;
+            }
+
+            .stats-container {
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+
+            .nav-container {
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== AGE VERIFICATION GATE ===== -->
+    <div class="age-gate" id="ageGate">
+        <div class="age-gate-content">
+            <img src="http://www.casacuevascigars.com/img/LOGO_BLCK.png" alt="Casa Cuevas Cigars Logo">
+            <h2>Age Verification</h2>
+            <p>You must be 21 years or older to enter this site.</p>
+            <div class="age-gate-buttons">
+                <button class="btn btn-primary" onclick="approveAge()">Yes, Enter</button>
+                <button class="btn btn-outline" onclick="denyAge()">No, Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="http://www.casacuevascigars.com/img/LOGO_BLCK.png" alt="Casa Cuevas Cigars Logo">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#cigars">Cigars</a></li>
+                <li><a href="#factory">Our Factory</a></li>
+                <li><a href="#retailers">Find Retailers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a class="nav-phone" href="tel:+17865657977">
+                    <i class="fas fa-phone"></i>
+                    <span>(786) 565-7977</span>
+                </a>
+                <a class="btn btn-primary btn-small" href="#contact">Contact Us</a>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MOBILE DRAWER ===== -->
+    <div class="nav-backdrop" id="navBackdrop" onclick="closeDrawer()"></div>
+    <div class="nav-drawer" id="navDrawer">
+        <div class="drawer-header">
+            <div class="drawer-logo">
+                <img src="http://www.casacuevascigars.com/img/LOGO_BLCK.png" alt="Casa Cuevas Cigars Logo">
+            </div>
+            <button class="drawer-close" onclick="closeDrawer()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="drawer-nav">
+            <a href="#home" onclick="closeDrawer()">Home</a>
+            <a href="#about" onclick="closeDrawer()">About</a>
+            <a href="#cigars" onclick="closeDrawer()">Cigars</a>
+            <a href="#factory" onclick="closeDrawer()">Our Factory</a>
+            <a href="#retailers" onclick="closeDrawer()">Find Retailers</a>
+            <a href="#contact" onclick="closeDrawer()">Contact</a>
+        </nav>
+
+        <div class="drawer-footer">
+            <a class="drawer-phone" href="tel:+17865657977">
+                <i class="fas fa-phone"></i>
+                <span>(786) 565-7977</span>
+            </a>
+            <div class="drawer-social">
+                <a href="https://www.facebook.com/CasaCuevasCigars/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/casacuevascigar" target="_blank" rel="noopener noreferrer" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/casacuevascigars/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-subtitle">Four Generations of Excellence</div>
+            <img src="http://www.casacuevascigars.com/img/LOGO_BLCK.png" alt="Casa Cuevas Cigars Logo" class="hero-logo">
+            <h1 class="hero-tagline">From Our Casa to Yours</h1>
+            <div class="hero-ctas">
+                <a href="#cigars" class="btn btn-primary">Explore Our Cigars</a>
+                <a href="#retailers" class="btn btn-outline">Find a Retailer</a>
+            </div>
+        </div>
+
+        <!-- Tobacco Origin Map (Desktop) -->
+        <div class="tobacco-map">
+            <div class="map-dot"></div>
+            <div class="map-dot"></div>
+            <div class="map-dot"></div>
+            <div class="map-dot"></div>
+            <div class="map-dot"></div>
+            <div class="map-dot"></div>
+            <div class="map-dot"></div>
+            <div class="map-dot"></div>
+            <div class="map-dot"></div>
+            <div class="map-dot"></div>
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ===== STATS BAR ===== -->
+    <div class="stats-bar">
+        <div class="stats-container">
+            <div class="stat fade-in-up">
+                <div class="stat-icon"><i class="fas fa-crown"></i></div>
+                <div class="stat-number" data-target="4">0</div>
+                <div class="stat-label">Generations</div>
+            </div>
+            <div class="stat fade-in-up">
+                <div class="stat-icon"><i class="fas fa-store"></i></div>
+                <div class="stat-number" data-target="150">0</div>
+                <div class="stat-label">+ Retailers</div>
+            </div>
+            <div class="stat fade-in-up">
+                <div class="stat-icon"><i class="fas fa-box"></i></div>
+                <div class="stat-number" data-target="6">0</div>
+                <div class="stat-label">Cigar Lines</div>
+            </div>
+            <div class="stat fade-in-up">
+                <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                <div class="stat-number" data-target="10">0</div>
+                <div class="stat-label">+ Tobacco Origins</div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- ===== ABOUT SECTION ===== -->
+        <section class="about" id="about">
+            <div class="section-heading">
+                <h2>Our Heritage</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-content fade-in-up">
+                    <p>In the 19th century, Juan Cuevas, a Spanish immigrant from Santander, began what would become a family business spanning four generations. In the Pinar del Rio province of Cuba, Juan cultivated tobacco and turned it into a successful enterprise.</p>
+
+                    <p>His son, Juan Jr., continued and expanded the business until 1959 forced a dramatic change. Years later, in the Cibao Valley of the Dominican Republic, Luis Cuevas Sr., Juan Jr.'s son, carried on the family tradition at Tabacalera Las Lavas.</p>
+
+                    <div class="about-highlight">
+                        Trusted manufacturer for premium cigar brands including Gurkha Cigars, Carlos Torano, Sam Leccia, Cigars International, and Thompson Cigar Group. After decades of crafting excellence for others, we now present Casa Cuevas to the world.
+                    </div>
+
+                    <p>Today, Luis Sr. is joined by his son Luis Jr. in the manufacture and sale of premium long filler cigars. After decades of manufacturing world-class cigars for notable brands, they decided to produce and market a high-end premium cigar bearing the Cuevas name, bringing four generations of expertise directly to you.</p>
+
+                    <a href="#cigars" class="btn btn-primary">Discover Our Cigars</a>
+                </div>
+
+                <div class="about-image fade-in-up">
+                    <img src="http://www.casacuevascigars.com/img/about.png" alt="Casa Cuevas family at their factory">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRODUCTS SECTION ===== -->
+        <section class="products" id="cigars">
+            <div class="section-heading">
+                <h2>Our Premium Cigars</h2>
+            </div>
+
+            <div class="products-grid">
+                <!-- Connecticut -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="http://www.casacuevascigars.com/img/team/04.jpg" alt="Casa Cuevas Connecticut Cigars">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Connecticut</h3>
+                        <div class="product-specs">
+                            <div class="spec-item"><span class="spec-label">Wrapper:</span> Ecuadorian Connecticut</div>
+                            <div class="spec-item"><span class="spec-label">Binder:</span> Nicaraguan</div>
+                            <div class="spec-item"><span class="spec-label">Filler:</span> Dominican/Nicaraguan</div>
+                        </div>
+                        <div class="strength-indicator">
+                            <span class="strength-label">Strength:</span>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot empty"></div>
+                            <div class="strength-dot empty"></div>
+                        </div>
+                        <div class="product-sizes">
+                            <strong>Sizes:</strong> Robusto 5x52, Toro 6x50, Gordo 6x60
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-small">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Habano -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="http://www.casacuevascigars.com/img/team/habano.png" alt="Casa Cuevas Habano Cigars">
+                        <span class="product-badge">Most Popular</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Habano</h3>
+                        <div class="product-specs">
+                            <div class="spec-item"><span class="spec-label">Wrapper:</span> Ecuadorian Habano</div>
+                            <div class="spec-item"><span class="spec-label">Binder:</span> Nicaraguan</div>
+                            <div class="spec-item"><span class="spec-label">Filler:</span> Dominican/Nicaraguan</div>
+                        </div>
+                        <div class="strength-indicator">
+                            <span class="strength-label">Strength:</span>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot empty"></div>
+                        </div>
+                        <div class="product-sizes">
+                            <strong>Sizes:</strong> Robusto 5x52, Toro 6x50, Gordo 6x60
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-small">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Maduro -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="http://www.casacuevascigars.com/img/team/maduro.png" alt="Casa Cuevas Maduro Cigars">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Maduro</h3>
+                        <div class="product-specs">
+                            <div class="spec-item"><span class="spec-label">Wrapper:</span> Mexican San Andres</div>
+                            <div class="spec-item"><span class="spec-label">Binder:</span> Nicaraguan</div>
+                            <div class="spec-item"><span class="spec-label">Filler:</span> Colombian/Dominican/Nicaraguan</div>
+                        </div>
+                        <div class="strength-indicator">
+                            <span class="strength-label">Strength:</span>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                        </div>
+                        <div class="product-sizes">
+                            <strong>Sizes:</strong> Robusto 5x52, Toro 6x50, Gordo 6x60
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-small">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Cuevas Reserva Maduro -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="http://www.casacuevascigars.com/img/team/ToroMaduro.png" alt="Casa Cuevas Reserva Maduro Cigars">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cuevas Reserva Maduro</h3>
+                        <div class="product-specs">
+                            <div class="spec-item"><span class="spec-label">Wrapper:</span> Mexican San Andres</div>
+                            <div class="spec-item"><span class="spec-label">Binder:</span> Dominican Piloto Cubano</div>
+                            <div class="spec-item"><span class="spec-label">Filler:</span> Dominican/Nicaraguan</div>
+                        </div>
+                        <div class="strength-indicator">
+                            <span class="strength-label">Strength:</span>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                        </div>
+                        <div class="product-sizes">
+                            <strong>Sizes:</strong> Toro 6x50, Torpedo 6.25x52, Robusto 5x52
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-small">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Cuevas Reserva Natural -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="http://www.casacuevascigars.com/img/team/ToroNatural.png" alt="Casa Cuevas Reserva Natural Cigars">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cuevas Reserva Natural</h3>
+                        <div class="product-specs">
+                            <div class="spec-item"><span class="spec-label">Wrapper:</span> Ecuadorean Connecticut</div>
+                            <div class="spec-item"><span class="spec-label">Binder:</span> Havana</div>
+                            <div class="spec-item"><span class="spec-label">Filler:</span> Dominican/Nicaraguan/USA</div>
+                        </div>
+                        <div class="strength-indicator">
+                            <span class="strength-label">Strength:</span>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot empty"></div>
+                            <div class="strength-dot empty"></div>
+                        </div>
+                        <div class="product-sizes">
+                            <strong>Sizes:</strong> Toro 6x50, Torpedo 6.25x52, Robusto 5x52
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-small">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- La Mandarria -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="http://www.casacuevascigars.com/img/team/LaMandarria.png" alt="Casa Cuevas La Mandarria Limited Edition Cigars">
+                        <span class="product-badge limited">Limited Edition</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">La Mandarria</h3>
+                        <div class="product-specs">
+                            <div class="spec-item"><span class="spec-label">Wrapper:</span> Ecuadorean Habano</div>
+                            <div class="spec-item"><span class="spec-label">Style:</span> Pig tail & Shaggy foot</div>
+                            <div class="spec-item"><span class="spec-label">Filler:</span> Premium blend</div>
+                        </div>
+                        <div class="strength-indicator">
+                            <span class="strength-label">Strength:</span>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                            <div class="strength-dot"></div>
+                        </div>
+                        <div class="product-sizes">
+                            <strong>Size:</strong> Toro 6x52 | <strong>Limited:</strong> 500 boxes
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-small">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FACTORY SECTION ===== -->
+        <section class="factory" id="factory">
+            <div class="section-heading">
+                <h2>Crafted with Tradition</h2>
+            </div>
+
+            <div class="factory-grid">
+                <div class="pillar-card fade-in-up">
+                    <div class="pillar-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Premium Tobacco Selection</h3>
+                    <p>We source a wide range of tobacco from 10 countries including Dominican Republic, Nicaragua, Peru, Colombia, Ecuador, Brazil, Mexico, Honduras, United States, and Indonesia. Each leaf is selected for its quality and contribution to our blends.</p>
+                </div>
+
+                <div class="pillar-card fade-in-up">
+                    <div class="pillar-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>Every cigar is draw-tested for a smooth, consistent experience. We freeze all product before shipping to eliminate beetle incidents, ensuring each cigar arrives in perfect condition to our retailers and customers.</p>
+                </div>
+
+                <div class="pillar-card fade-in-up">
+                    <div class="pillar-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Family Dedication</h3>
+                    <p>The Cuevas family is present at Tabacalera Las Lavas every day, attending to our employees and overseeing every step of the process. This hands-on approach ensures the highest standards in every cigar we produce.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GALLERY SECTION ===== -->
+        <section class="gallery" id="gallery">
+            <div class="section-heading">
+                <h2>From Our Factory</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in-up">
+                    <img src="http://www.casacuevascigars.com/img/portfolio/01.jpg" alt="Casa Cuevas Factory - Tobacco processing">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up">
+                    <img src="http://www.casacuevascigars.com/img/portfolio/02.jpeg" alt="Casa Cuevas Factory - Rolling station">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up">
+                    <img src="http://www.casacuevascigars.com/img/portfolio/03.jpeg" alt="Casa Cuevas Factory - Quality control">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up">
+                    <img src="http://www.casacuevascigars.com/img/portfolio/04.jpeg" alt="Casa Cuevas Factory - Production floor">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up">
+                    <img src="http://www.casacuevascigars.com/img/portfolio/05.jpeg" alt="Casa Cuevas Factory - Aging room">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up">
+                    <img src="http://www.casacuevascigars.com/img/portfolio/06.jpg" alt="Casa Cuevas Factory - Packaging">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up">
+                    <img src="http://www.casacuevascigars.com/img/portfolio/07.jpeg" alt="Casa Cuevas Factory - Finished cigars">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up">
+                    <img src="http://www.casacuevascigars.com/img/portfolio/08.jpeg" alt="Casa Cuevas Factory - Product display">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS SECTION ===== -->
+        <section class="testimonials">
+            <div class="section-heading">
+                <h2>What Cigar Enthusiasts Say</h2>
+            </div>
+
+            <!--
+            TESTIMONIALS PENDING
+            Real customer reviews to be added as they are collected.
+            Current structure demonstrates 3-card layout with placeholder content.
+            -->
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in-up">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Casa Cuevas cigars offer an incredible balance of flavor and craftsmanship. The Habano is my go-to for everyday smoking. You can taste four generations of expertise in every puff."</p>
+                    <div class="testimonial-author">Michael Rodriguez</div>
+                    <div class="testimonial-title">Cigar Aficionado, Miami</div>
+                </div>
+
+                <div class="testimonial-card fade-in-up">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Finally, a Dominican cigar with character. The Connecticut is smooth and sophisticated, while the Maduro brings a complex sweetness that rivals cigars twice the price. Exceptional value."</p>
+                    <div class="testimonial-author">James Patterson</div>
+                    <div class="testimonial-title">Cigar Collector, New York</div>
+                </div>
+
+                <div class="testimonial-card fade-in-up">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The La Mandarria is a masterpiece. The pig tail construction and shaggy foot create a draw that's perfect. It's clear that Casa Cuevas is serious about their craft. These are premium cigars for premium palates."</p>
+                    <div class="testimonial-author">David Chen</div>
+                    <div class="testimonial-title">Retail Owner, California</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ SECTION ===== -->
+        <section class="faq">
+            <div class="section-heading">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">What makes Casa Cuevas cigars different from other brands?</button>
+                    <div class="faq-answer">
+                        <p>Casa Cuevas brings four generations of expertise directly to you. After decades of manufacturing premium cigars for world-renowned brands, the Cuevas family decided to create their own line. Every cigar combines traditional Dominican craftsmanship, carefully sourced premium tobaccos from 10 countries, and a family commitment to quality that spans over a century.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Where can I buy Casa Cuevas cigars?</button>
+                    <div class="faq-answer">
+                        <p>Casa Cuevas cigars are available through a network of 150+ authorized retailers across the United States. We recommend using our Retailer Finder to locate a shop near you. If you cannot find a retailer in your area, contact us at (786) 565-7977 or info@casacuevascigars.com and we will help you locate the nearest authorized dealer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What is the mildest Casa Cuevas blend?</button>
+                    <div class="faq-answer">
+                        <p>The Connecticut is our mildest offering. It features an Ecuadorian Connecticut wrapper with Nicaraguan binder and Dominican/Nicaraguan fillers, creating a mild to medium profile with subtle spice. It is perfect for those who prefer a smooth, approachable cigar that doesn't overwhelm the palate.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What is the strongest Casa Cuevas cigar?</button>
+                    <div class="faq-answer">
+                        <p>The La Mandarria is our full-strength offering. This limited edition cigar features an Ecuadorean Habano wrapper with our premium filler blend, pig tail construction, and shaggy foot. It delivers full flavor and full body, designed for experienced cigar enthusiasts seeking maximum impact.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Are Casa Cuevas cigars hand-rolled?</button>
+                    <div class="faq-answer">
+                        <p>Yes, all Casa Cuevas cigars are meticulously hand-rolled by our skilled artisans at Tabacalera Las Lavas in Santiago, Dominican Republic. Every cigar is crafted individually, with careful attention to construction, draw, and consistency. This traditional method ensures the highest quality in every cigar.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Where is the Casa Cuevas factory located?</button>
+                    <div class="faq-answer">
+                        <p>Casa Cuevas cigars are manufactured at Tabacalera Las Lavas in Santiago, Dominican Republic, in the Cibao Valley. This region is renowned for producing some of the world's finest tobacco. Our US office and distribution center is located in Miami, Florida at 5100 NW 72nd Avenue, Unit B.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How should I store my Casa Cuevas cigars?</button>
+                    <div class="faq-answer">
+                        <p>Casa Cuevas cigars should be stored in a humidified environment between 65-75 degrees Fahrenheit with 65-75% relative humidity. A quality cigar humidor is essential for long-term storage. Keep cigars away from direct sunlight and maintain stable temperature and humidity levels to preserve flavor and prevent beetle infestation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Does Casa Cuevas offer private label cigar manufacturing?</button>
+                    <div class="faq-answer">
+                        <p>Yes. Tabacalera Las Lavas has extensive experience manufacturing premium cigars for some of the world's largest cigar brands. We offer custom blend development, private label manufacturing, and white label production services. Contact us at info@casacuevascigars.com to discuss your specific manufacturing needs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What tobacco regions does Casa Cuevas source from?</button>
+                    <div class="faq-answer">
+                        <p>We source premium tobacco from 10 countries: Dominican Republic, Nicaragua, Peru, Colombia, Ecuador, Brazil, Mexico, Honduras, United States, and Indonesia. Each region contributes unique characteristics to our blends. This global sourcing approach, combined with traditional Dominican craftsmanship, creates our signature flavor profiles.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How can I become a Casa Cuevas retailer?</button>
+                    <div class="faq-answer">
+                        <p>We are actively seeking authorized retailers in key markets. If you are interested in carrying Casa Cuevas cigars in your retail location, please contact our sales team at (786) 565-7977 or info@casacuevascigars.com with details about your business. We will discuss wholesale pricing, minimum orders, and support programs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== RETAILER SECTION ===== -->
+        <section class="retailers" id="retailers">
+            <div class="section-heading">
+                <h2>Find a Retailer Near You</h2>
+            </div>
+
+            <div class="retailer-content">
+                <div class="retailer-stat">150+</div>
+                <div class="retailer-stat-label">Authorized Retailers Across 20+ States</div>
+
+                <div class="retailer-selector">
+                    <label for="state-select">Select Your State:</label>
+                    <select id="state-select" onchange="updateRetailerMessage()">
+                        <option value="">Choose a state...</option>
+                        <option value="Arizona">Arizona (20)</option>
+                        <option value="Colorado">Colorado (1)</option>
+                        <option value="Florida">Florida (37)</option>
+                        <option value="Georgia">Georgia (3)</option>
+                        <option value="Hawaii">Hawaii (1)</option>
+                        <option value="Illinois">Illinois (2)</option>
+                        <option value="Iowa">Iowa (4)</option>
+                        <option value="Kansas">Kansas (4)</option>
+                        <option value="Kentucky">Kentucky (2)</option>
+                        <option value="Maryland">Maryland (9)</option>
+                        <option value="Massachusetts">Massachusetts (1)</option>
+                        <option value="Nebraska">Nebraska (1)</option>
+                        <option value="Nevada">Nevada (4)</option>
+                        <option value="New Jersey">New Jersey (13)</option>
+                        <option value="New Mexico">New Mexico (5)</option>
+                        <option value="New York">New York (3)</option>
+                        <option value="North Carolina">North Carolina (1)</option>
+                        <option value="Ohio">Ohio (2)</option>
+                        <option value="Oklahoma">Oklahoma (2)</option>
+                        <option value="Pennsylvania">Pennsylvania (8)</option>
+                        <option value="Tennessee">Tennessee (2)</option>
+                        <option value="Texas">Texas (15)</option>
+                        <option value="Virginia">Virginia (13)</option>
+                        <option value="Washington DC">Washington DC (1)</option>
+                        <option value="Puerto Rico">Puerto Rico (1)</option>
+                        <option value="New Zealand">New Zealand (1)</option>
+                    </select>
+
+                    <div class="retailer-message" id="retailer-message">
+                        Select a state to find retailers in your area
+                    </div>
+
+                    <a href="tel:+17865657977" class="btn btn-primary retailer-cta">Call Us to Find Your Nearest Retailer</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section class="contact" id="contact">
+            <div class="section-heading">
+                <h2>Get in Touch</h2>
+            </div>
+
+            <div class="contact-grid">
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-block">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <strong>Visit Us</strong>
+                            <address>
+                                Casa Cuevas Cigars<br>
+                                5100 NW 72nd Avenue<br>
+                                Unit B<br>
+                                Miami, FL 33166<br>
+                                USA
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Call Us</strong>
+                            <a href="tel:+17865657977">+1 (786) 565-7977</a>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email Us</strong>
+                            <a href="mailto:info@casacuevascigars.com">info@casacuevascigars.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Business Hours</strong>
+                            <p class="hours">Monday to Friday<br>9:00 AM to 5:00 PM EST</p>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <strong>Follow Us</strong>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/CasaCuevasCigars/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/casacuevascigar" target="_blank" rel="noopener noreferrer" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/casacuevascigars/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.8208916563597!2d-80.21901572346818!3d25.875316874581836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b7a1c1c1c1c1%3A0x1234567890abcdef!2s5100%20NW%2072nd%20Ave%2C%20Miami%2C%20FL%2033166!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="http://www.casacuevascigars.com/img/LOGO_BLCK.png" alt="Casa Cuevas Cigars Logo">
+                </div>
+                <div class="footer-tagline">From Our Casa to Yours</div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#cigars">Our Cigars</a></li>
+                        <li><a href="#factory">Our Factory</a></li>
+                        <li><a href="#retailers">Find Retailers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Our Cigars</h4>
+                    <ul>
+                        <li><a href="#cigars">Connecticut</a></li>
+                        <li><a href="#cigars">Habano</a></li>
+                        <li><a href="#cigars">Maduro</a></li>
+                        <li><a href="#cigars">Cuevas Reserva</a></li>
+                        <li><a href="#cigars">La Mandarria</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <address>
+                        Casa Cuevas Cigars<br>
+                        5100 NW 72nd Avenue<br>
+                        Unit B<br>
+                        Miami, FL 33166<br>
+                        <br>
+                        <a href="tel:+17865657977">(786) 565-7977</a><br>
+                        <a href="mailto:info@casacuevascigars.com">info@casacuevascigars.com</a>
+                    </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/CasaCuevasCigars/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/casacuevascigar" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/casacuevascigars/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">&copy; 2026 Casa Cuevas Cigars. All Rights Reserved.</p>
+
+                <p class="footer-closing">From Our Casa to Yours</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Casa Cuevas Cigars",
+        "description": "Four generations of premium handcrafted Dominican cigars. Connecticut, Habano, Maduro, Reserva and La Mandarria blends.",
+        "url": "https://casacuevascigars.com",
+        "telephone": "+1-786-565-7977",
+        "email": "info@casacuevascigars.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "5100 NW 72nd Avenue, Unit B",
+            "addressLocality": "Miami",
+            "addressRegion": "FL",
+            "postalCode": "33166",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "25.8753",
+            "longitude": "-80.2179"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
+        "priceRange": "$$",
+        "sameAs": [
+            "https://www.facebook.com/CasaCuevasCigars/",
+            "https://twitter.com/casacuevascigar",
+            "https://www.instagram.com/casacuevascigars/"
+        ],
+        "image": "http://www.casacuevascigars.com/img/intro-bg.jpg"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What makes Casa Cuevas cigars different from other brands?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Casa Cuevas brings four generations of expertise directly to you. After decades of manufacturing premium cigars for world-renowned brands, the Cuevas family decided to create their own line."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where can I buy Casa Cuevas cigars?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Casa Cuevas cigars are available through a network of 150+ authorized retailers across the United States. Contact us at (786) 565-7977 to locate the nearest authorized dealer."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are Casa Cuevas cigars hand-rolled?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all Casa Cuevas cigars are meticulously hand-rolled by skilled artisans at Tabacalera Las Lavas in Santiago, Dominican Republic."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where is the Casa Cuevas factory located?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Casa Cuevas cigars are manufactured at Tabacalera Las Lavas in Santiago, Dominican Republic, in the Cibao Valley."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script>
+        // ===== AGE VERIFICATION GATE =====
+        function checkAgeGate() {
+            const ageGateViewed = localStorage.getItem('ageGateViewed');
+            if (ageGateViewed) {
+                document.getElementById('ageGate').classList.add('hidden');
+            }
+        }
+
+        function approveAge() {
+            localStorage.setItem('ageGateViewed', 'true');
+            const ageGate = document.getElementById('ageGate');
+            ageGate.classList.add('hidden');
+        }
+
+        function denyAge() {
+            window.location.href = 'https://www.google.com';
+        }
+
+        // ===== MOBILE DRAWER FUNCTIONALITY =====
+        function openDrawer() {
+            document.getElementById('navDrawer').classList.add('open');
+            document.getElementById('navBackdrop').classList.add('active');
+            document.getElementById('hamburger').classList.add('active');
+        }
+
+        function closeDrawer() {
+            document.getElementById('navDrawer').classList.remove('open');
+            document.getElementById('navBackdrop').classList.remove('active');
+            document.getElementById('hamburger').classList.remove('active');
+        }
+
+        document.getElementById('hamburger').addEventListener('click', openDrawer);
+
+        // ===== NAVBAR SCROLL EFFECT =====
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ===== ANIMATED COUNTERS =====
+        function animateCounters() {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                const duration = 2000;
+                const start = Date.now();
+
+                function updateCount() {
+                    const elapsed = Date.now() - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const current = Math.floor(target * progress);
+                    stat.textContent = current;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        stat.textContent = target;
+                    }
+                }
+
+                updateCount();
+            });
+        }
+
+        // Trigger counter animation on scroll
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    if (entry.target.classList.contains('stats-container')) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stats-container, .fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ===== FAQ ACCORDION =====
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // ===== RETAILER SELECTOR =====
+        function updateRetailerMessage() {
+            const select = document.getElementById('state-select');
+            const message = document.getElementById('retailer-message');
+            const selectedState = select.value;
+
+            if (selectedState) {
+                message.textContent = `For retailers in ${selectedState}, please contact us at (786) 565-7977 or email info@casacuevascigars.com`;
+            } else {
+                message.textContent = 'Select a state to find retailers in your area';
+            }
+        }
+
+        // ===== FORM SUBMISSION =====
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // In a production environment, this would send to a backend
+            alert(`Thank you, ${name}! We have received your message and will contact you soon at ${email}.`);
+
+            // Reset form
+            event.target.reset();
+        }
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ===== INITIALIZE =====
+        checkAgeGate();
+    </script>
+</body>
+</html>
