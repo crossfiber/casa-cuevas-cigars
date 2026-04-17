@@ -181,8 +181,8 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.7rem); font-weight: 500; }
 h4 { font-size: 1.1rem; font-weight: 600; letter-spacing: -0.005em; }
 
 p { margin: 0 0 1em; max-width: 68ch; }
-a { color: var(--oxblood); text-decoration: none; transition: color 0.2s var(--ease); }
-a:hover { color: var(--oxblood-hover); }
+a { color: var(--cedar); text-decoration: none; transition: color 0.2s var(--ease); }
+a:hover { color: var(--gold); }
 
 .eyebrow {
   font-family: "Hanken Grotesk", sans-serif;
@@ -214,12 +214,12 @@ a:hover { color: var(--oxblood-hover); }
   line-height: 1;
 }
 .btn--primary {
-  background: var(--oxblood);
-  color: #FBF3DE;
-  border-color: var(--oxblood);
-  box-shadow: 0 2px 8px rgba(142, 31, 26, 0.25);
+  background: var(--gold-bright);
+  color: var(--espresso);
+  border-color: var(--gold-bright);
+  box-shadow: 0 2px 10px rgba(184, 137, 44, 0.32);
 }
-.btn--primary:hover { background: var(--oxblood-hover); color: #FFF8E3; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(142, 31, 26, 0.35); }
+.btn--primary:hover { background: #E5BC55; color: var(--espresso); border-color: #E5BC55; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(184, 137, 44, 0.48); }
 .btn--ghost {
   background: transparent;
   color: var(--ink);
@@ -250,13 +250,15 @@ a:hover { color: var(--oxblood-hover); }
   top: 0; left: 0; right: 0;
   z-index: 100;
   transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease), padding 0.3s var(--ease);
-  padding: 24px 0;
-  background: transparent;
+  padding: 18px 0;
+  background: linear-gradient(180deg, rgba(18, 12, 6, 0.72) 0%, rgba(18, 12, 6, 0) 100%);
+  backdrop-filter: blur(2px);
 }
 .nav.is-scrolled {
   background: rgba(243, 234, 209, 0.97);
   box-shadow: 0 1px 0 var(--rule), 0 6px 20px rgba(20, 14, 10, 0.08);
-  padding: 14px 0;
+  padding: 12px 0;
+  backdrop-filter: blur(8px);
 }
 .nav__inner {
   display: flex;
@@ -270,15 +272,22 @@ a:hover { color: var(--oxblood-hover); }
 .nav__logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: "Fraunces", serif;
   font-weight: 500;
   font-size: 1.3rem;
   letter-spacing: 0.02em;
-  color: var(--ink);
+  color: var(--parchment);
+  transition: color 0.3s var(--ease);
 }
-.nav__logo img { height: 40px; width: auto; transition: height 0.3s var(--ease); }
-.nav.is-scrolled .nav__logo img { height: 34px; }
+.nav__logo img {
+  height: 58px;
+  width: auto;
+  transition: height 0.3s var(--ease), filter 0.3s var(--ease);
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+}
+.nav.is-scrolled .nav__logo { color: var(--ink); }
+.nav.is-scrolled .nav__logo img { height: 48px; filter: none; }
 .nav__links {
   list-style: none;
   display: flex;
@@ -287,25 +296,28 @@ a:hover { color: var(--oxblood-hover); }
   padding: 0;
 }
 .nav__links a {
-  color: var(--ink);
+  color: var(--parchment);
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 500;
   font-size: 0.92rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   transition: color 0.2s var(--ease);
   position: relative;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
+.nav.is-scrolled .nav__links a { color: var(--ink); text-shadow: none; }
 .nav__links a::after {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: -6px;
   height: 1px;
-  background: var(--gold);
+  background: var(--gold-bright);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s var(--ease);
 }
-.nav__links a:hover { color: var(--cedar); }
+.nav__links a:hover { color: var(--gold-bright); }
+.nav.is-scrolled .nav__links a:hover { color: var(--cedar); }
 .nav__links a:hover::after { transform: scaleX(1); }
 .nav__cta {
   display: flex;
@@ -313,23 +325,28 @@ a:hover { color: var(--oxblood-hover); }
   gap: 18px;
 }
 .nav__tel {
-  color: var(--oxblood);
+  color: var(--gold-bright);
   font-weight: 600;
   font-size: 0.95rem;
   display: flex;
   align-items: center;
   gap: 7px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  transition: color 0.3s var(--ease), text-shadow 0.3s var(--ease);
 }
-.nav__tel:hover { color: var(--oxblood-hover); }
+.nav.is-scrolled .nav__tel { color: var(--gold); text-shadow: none; }
+.nav__tel:hover { color: #E5BC55; }
 .nav__burger {
   display: none;
   background: none;
   border: none;
   font-size: 1.4rem;
-  color: var(--ink);
+  color: var(--parchment);
   cursor: pointer;
   padding: 4px 8px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
+.nav.is-scrolled .nav__burger { color: var(--ink); text-shadow: none; }
 
 .mobile-menu {
   position: fixed;
@@ -379,9 +396,9 @@ a:hover { color: var(--oxblood-hover); }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(28, 20, 14, 0.92) 0%, rgba(28, 20, 14, 0.7) 50%, rgba(28, 20, 14, 0.95) 100%),
-    url("img/portfolio/06.jpg") center 30% / cover no-repeat;
-  opacity: 0.9;
+    linear-gradient(180deg, rgba(18, 12, 6, 0.78) 0%, rgba(18, 12, 6, 0.55) 40%, rgba(18, 12, 6, 0.85) 100%),
+    url("img/intro-bg.jpg") center center / cover no-repeat;
+  opacity: 1;
 }
 .hero__grain {
   position: absolute;
@@ -463,14 +480,16 @@ a:hover { color: var(--oxblood-hover); }
 /* Signature element: FOUR GENERATIONS interactive heritage card */
 .heritage-card {
   position: relative;
-  background: linear-gradient(180deg, rgba(42, 31, 20, 0.82) 0%, rgba(28, 20, 14, 0.88) 100%);
-  border: 1px solid rgba(184, 137, 44, 0.35);
-  padding: 32px 32px 28px;
+  background: linear-gradient(180deg, rgba(28, 20, 14, 0.78) 0%, rgba(18, 12, 6, 0.88) 100%);
+  border: 1px solid rgba(207, 166, 61, 0.4);
+  padding: 34px 34px 30px;
   color: var(--parchment);
   opacity: 0;
   animation: fadeUp 1.1s var(--ease) 0.75s forwards;
   transform: translateY(26px);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  overflow: hidden;
 }
 .heritage-card::before {
   content: "";
@@ -562,7 +581,7 @@ a:hover { color: var(--oxblood-hover); }
   box-shadow: 0 0 0 6px rgba(184, 137, 44, 0.22);
 }
 .pin.is-active::after, .pin:hover::after { color: var(--gold-bright); }
-.heritage-panels { position: relative; min-height: 92px; }
+.heritage-panels { position: relative; min-height: 170px; }
 .heritage-panel {
   position: absolute;
   inset: 0;
@@ -570,6 +589,7 @@ a:hover { color: var(--oxblood-hover); }
   transform: translateY(8px);
   transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
   pointer-events: none;
+  overflow: hidden;
 }
 .heritage-panel.is-active { opacity: 1; transform: translateY(0); pointer-events: auto; }
 .heritage-panel__name {
@@ -582,16 +602,16 @@ a:hover { color: var(--oxblood-hover); }
 }
 .heritage-panel__place {
   font-family: "Hanken Grotesk", sans-serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-bright);
   margin: 0 0 10px;
 }
 .heritage-panel__desc {
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: rgba(235, 223, 195, 0.82);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: rgba(235, 223, 195, 0.88);
   margin: 0;
   max-width: 44ch;
 }
@@ -964,31 +984,28 @@ a:hover { color: var(--oxblood-hover); }
 .blend:hover { background: var(--parchment-warm); }
 
 .blend--featured {
-  background: var(--espresso);
-  color: var(--parchment);
-  padding: 40px 30px 32px;
   position: relative;
-  overflow: hidden;
 }
-.blend--featured:hover { background: var(--espresso-2); }
-.blend--featured::before {
-  content: "LIMITED — 500 BOXES";
-  position: absolute;
-  top: 28px; right: 28px;
+.blend--featured .blend__limited {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: "Hanken Grotesk", sans-serif;
-  font-size: 0.66rem;
-  letter-spacing: 0.22em;
-  font-weight: 600;
-  color: var(--gold-bright);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(184, 137, 44, 0.08);
   border: 1px solid var(--gold);
-  padding: 6px 10px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  white-space: nowrap;
 }
-.blend--featured .blend__title { color: var(--parchment); }
-.blend--featured .blend__title em { color: var(--gold-bright); }
-.blend--featured .blend__desc { color: rgba(235, 223, 195, 0.82); }
-.blend--featured .blend__specs { border-color: rgba(184, 137, 44, 0.25); }
-.blend--featured .spec__label { color: var(--gold-bright); }
-.blend--featured .spec__value { color: var(--parchment); }
+.blend--featured .blend__limited i { font-size: 0.7rem; color: var(--gold); }
 
 .blend__no {
   font-family: "Hanken Grotesk", sans-serif;
@@ -1009,7 +1026,6 @@ a:hover { color: var(--oxblood-hover); }
   margin: 0 auto;
   filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
 }
-.blend--featured .blend__img-wrap img { max-height: 180px; filter: drop-shadow(0 14px 28px rgba(0,0,0,0.4)); }
 .blend__title {
   font-family: "Fraunces", serif;
   font-size: 1.4rem;
@@ -1026,10 +1042,9 @@ a:hover { color: var(--oxblood-hover); }
   letter-spacing: 0.14em;
   font-size: 0.7rem;
   font-weight: 600;
-  color: var(--oxblood);
+  color: var(--cedar);
   margin-bottom: 16px;
 }
-.blend--featured .blend__tag { color: var(--gold-bright); }
 .blend__desc {
   font-size: 0.95rem;
   line-height: 1.6;
@@ -1068,17 +1083,15 @@ a:hover { color: var(--oxblood-hover); }
   letter-spacing: 0.12em;
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--oxblood);
+  color: var(--cedar);
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding-bottom: 3px;
-  border-bottom: 1px solid var(--oxblood);
-  transition: gap 0.3s var(--ease), color 0.3s var(--ease);
+  border-bottom: 1px solid var(--gold);
+  transition: gap 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease);
 }
-.blend__cta:hover { gap: 14px; color: var(--oxblood-hover); }
-.blend--featured .blend__cta { color: var(--gold-bright); border-bottom-color: var(--gold-bright); }
-.blend--featured .blend__cta:hover { color: var(--parchment); }
+.blend__cta:hover { gap: 14px; color: var(--gold); border-bottom-color: var(--gold-bright); }
 
 /* Reserva row - secondary pricing band style (distinct from the 3-col grid above) */
 .reserva {
@@ -1316,15 +1329,16 @@ a:hover { color: var(--oxblood-hover); }
 }
 
 /* =================================================================
-   MANUFACTURING PARTNERS (trusted-by strip, not cards)
+   MANUFACTURING PARTNERS — scrolling logo carousel
 ================================================================= */
 .partners {
   padding: 90px 0 95px;
   background: var(--parchment);
   border-top: 1px solid var(--rule);
   text-align: center;
+  overflow: hidden;
 }
-.partners__inner { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+.partners__inner { max-width: 1100px; margin: 0 auto 32px; padding: 0 28px; }
 .partners h3 {
   font-family: "Fraunces", serif;
   font-size: clamp(1.5rem, 2.4vw, 1.9rem);
@@ -1337,31 +1351,139 @@ a:hover { color: var(--oxblood-hover); }
 .partners__sub {
   font-size: 0.98rem;
   color: var(--ink-soft);
-  margin: 0 auto 36px;
+  margin: 0 auto 0;
   max-width: 54ch;
 }
-.partners__list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.partners__carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
+  background: linear-gradient(180deg, var(--parchment) 0%, var(--parchment-warm) 100%);
+  padding: 28px 0;
 }
-.partners__list li {
-  padding: 22px 28px;
-  font-family: "Fraunces", serif;
-  font-size: 1.05rem;
-  font-variation-settings: "opsz" 72, "SOFT" 60;
+.partners__carousel::before,
+.partners__carousel::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.partners__carousel::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--parchment) 0%, rgba(243, 234, 209, 0) 100%);
+}
+.partners__carousel::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--parchment-warm) 0%, rgba(237, 225, 194, 0) 100%);
+}
+.partners__track {
+  display: flex;
+  width: max-content;
+  animation: partnersScroll 42s linear infinite;
+  will-change: transform;
+}
+.partners__carousel:hover .partners__track { animation-play-state: paused; }
+@keyframes partnersScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.logo-mark {
+  flex: 0 0 auto;
+  min-width: 180px;
+  padding: 10px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--cedar);
-  font-weight: 500;
+  opacity: 0.78;
+  transition: opacity 0.3s var(--ease), color 0.3s var(--ease);
   border-right: 1px solid var(--rule);
-  letter-spacing: 0.01em;
+  white-space: nowrap;
 }
-.partners__list li:last-child { border-right: none; }
+.logo-mark:last-child { border-right: none; }
+.logo-mark:hover { opacity: 1; color: var(--ink); }
+.logo-mark .mark {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+.logo-mark--serif .mark {
+  font-family: "Fraunces", serif;
+  font-variation-settings: "opsz" 144, "SOFT" 70, "WONK" 1;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.logo-mark--serif-italic .mark {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+.logo-mark--caps .mark {
+  font-family: "Hanken Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.logo-mark--caps-thin .mark {
+  font-family: "Hanken Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.logo-mark--script .mark {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+  font-weight: 400;
+  font-size: 1.7rem;
+  letter-spacing: -0.02em;
+}
+.logo-mark--mono .mark {
+  font-family: "Fraunces", serif;
+  font-variation-settings: "opsz" 72, "SOFT" 0, "WONK" 0;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+.logo-mark--stacked .mark {
+  font-family: "Fraunces", serif;
+  font-variation-settings: "opsz" 72, "SOFT" 40;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  line-height: 1.15;
+  text-align: center;
+}
+.logo-mark--ampersand .mark {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+  font-weight: 400;
+  font-size: 1.55rem;
+  letter-spacing: 0;
+}
+.logo-mark--ampersand .amp {
+  font-size: 1.8rem;
+  color: var(--gold);
+  font-style: italic;
+  margin: 0 4px;
+}
+.partners__footnote {
+  margin-top: 24px;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
 /* =================================================================
    TESTIMONIALS / FACTORY NOTES (varied layout, not a grid)
@@ -1476,8 +1598,8 @@ a:hover { color: var(--oxblood-hover); }
   font-size: 0.62rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--oxblood);
-  border: 1px solid var(--oxblood);
+  color: var(--gold);
+  border: 1px solid var(--gold);
   padding: 4px 8px;
   margin-bottom: 14px;
 }
@@ -1536,7 +1658,7 @@ a:hover { color: var(--oxblood-hover); }
   font-size: 0.9rem;
   transition: transform 0.35s var(--ease);
 }
-.faq__item.is-open .faq__trigger i { transform: rotate(45deg); color: var(--oxblood); }
+.faq__item.is-open .faq__trigger i { transform: rotate(45deg); color: var(--gold); }
 .faq__answer {
   max-height: 0;
   overflow: hidden;
@@ -1602,33 +1724,141 @@ a:hover { color: var(--oxblood-hover); }
   margin-bottom: 26px;
 }
 .retailers__btns { display: flex; gap: 14px; flex-wrap: wrap; }
-.retailers__regions {
+
+/* State picker — clickable tiles */
+.retailers__picker {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 0;
-  border-top: 1px solid rgba(184, 137, 44, 0.25);
-  border-left: 1px solid rgba(184, 137, 44, 0.25);
+  border-top: 1px solid rgba(207, 166, 61, 0.3);
+  border-left: 1px solid rgba(207, 166, 61, 0.3);
+  max-height: 440px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
 }
-.region {
-  padding: 18px 20px;
-  border-right: 1px solid rgba(184, 137, 44, 0.18);
-  border-bottom: 1px solid rgba(184, 137, 44, 0.18);
+.retailers__picker::-webkit-scrollbar { width: 6px; }
+.retailers__picker::-webkit-scrollbar-track { background: rgba(0,0,0,0.15); }
+.retailers__picker::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+.state-btn {
+  all: unset;
+  padding: 16px 20px;
+  border-right: 1px solid rgba(207, 166, 61, 0.22);
+  border-bottom: 1px solid rgba(207, 166, 61, 0.22);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 0.92rem;
-  transition: background 0.3s var(--ease);
+  transition: background 0.25s var(--ease), color 0.25s var(--ease);
   cursor: pointer;
+  color: var(--parchment);
+  box-sizing: border-box;
+  gap: 10px;
 }
-.region:hover { background: rgba(184, 137, 44, 0.08); }
-.region__name { color: var(--parchment); font-weight: 500; }
-.region__count {
+.state-btn:hover, .state-btn:focus-visible { background: rgba(207, 166, 61, 0.1); outline: none; }
+.state-btn.is-active { background: var(--gold-bright); color: var(--espresso); }
+.state-btn.is-active .state-btn__count { color: var(--espresso); }
+.state-btn.is-active .state-btn__name i { color: var(--espresso); }
+.state-btn__name { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+.state-btn__name i { color: var(--gold); font-size: 0.82rem; transition: color 0.25s var(--ease); }
+.state-btn__count {
   color: var(--gold-bright);
   font-family: "Fraunces", serif;
   font-variation-settings: "opsz" 72;
-  font-size: 1.04rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.25s var(--ease);
 }
+
+/* Retailer results panel */
+.retailers__results {
+  margin-top: 28px;
+  border: 1px solid rgba(207, 166, 61, 0.3);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 24px 26px;
+  min-height: 240px;
+  max-height: 520px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
+}
+.retailers__results::-webkit-scrollbar { width: 6px; }
+.retailers__results::-webkit-scrollbar-track { background: rgba(0,0,0,0.25); }
+.retailers__results::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+.retailers__results-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(207, 166, 61, 0.25);
+}
+.retailers__results-title {
+  font-family: "Fraunces", serif;
+  font-variation-settings: "opsz" 72, "SOFT" 40;
+  font-weight: 500;
+  color: var(--parchment);
+  font-size: 1.15rem;
+  margin: 0;
+}
+.retailers__results-title em { font-style: italic; color: var(--gold-bright); }
+.retailers__results-count {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.retailers__empty {
+  color: rgba(235, 223, 195, 0.55);
+  font-style: italic;
+  padding: 28px 0;
+  text-align: center;
+  font-size: 0.94rem;
+}
+.shop-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.shop {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 14px;
+  padding: 14px 0;
+  border-bottom: 1px dashed rgba(207, 166, 61, 0.18);
+}
+.shop:last-child { border-bottom: none; }
+.shop__name {
+  grid-column: 1 / 2;
+  font-family: "Fraunces", serif;
+  font-variation-settings: "opsz" 72, "SOFT" 40;
+  font-weight: 500;
+  color: var(--parchment);
+  font-size: 1rem;
+  margin: 0;
+}
+.shop__phone {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-size: 0.86rem;
+  color: var(--gold-bright);
+  white-space: nowrap;
+  font-weight: 500;
+}
+.shop__phone:hover { color: #E5BC55; }
+.shop__address {
+  grid-column: 1 / 3;
+  font-size: 0.84rem;
+  color: rgba(235, 223, 195, 0.68);
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.shop__address i { color: var(--gold); font-size: 0.78rem; margin-top: 3px; flex-shrink: 0; }
+.shop__address a { color: inherit; border-bottom: 1px solid transparent; transition: border-color 0.2s var(--ease), color 0.2s var(--ease); }
+.shop__address a:hover { color: var(--parchment); border-bottom-color: var(--gold); }
 
 /* =================================================================
    CONTACT
@@ -1718,8 +1948,8 @@ a:hover { color: var(--oxblood-hover); }
   margin-bottom: 2px;
 }
 .info-row .value { font-size: 0.94rem; color: var(--ink); line-height: 1.4; }
-.info-row .value a { color: var(--oxblood); font-weight: 500; }
-.info-row .value a:hover { color: var(--oxblood-hover); }
+.info-row .value a { color: var(--cedar); font-weight: 600; border-bottom: 1px solid var(--gold); }
+.info-row .value a:hover { color: var(--gold); }
 .contact__map {
   margin-top: 28px;
   aspect-ratio: 16/9;
@@ -1846,7 +2076,7 @@ address.footer-address { font-style: normal; }
 @media (max-width: 520px) {
   body { font-size: 16px; }
   .container, .nav__inner, .hero__inner, .trust-strip__inner, .blends__head, .blends__grid, .craft__head, .craft__timeline, .retailers__inner, .contact__inner, .footer__inner, .notes__inner, .faq__inner, .partners__inner { padding-left: 20px; padding-right: 20px; }
-  .blend, .blend--featured { padding: 32px 26px; }
+  .blend { padding: 32px 26px; }
   .legacy, .blends, .craft, .contact, .faq, .retailers, .notes { padding-top: 84px; padding-bottom: 84px; }
   .field--row { grid-template-columns: 1fr; gap: 18px; }
   .note--featured { padding: 36px 30px; }
@@ -2080,13 +2310,14 @@ address.footer-address { font-style: normal; }
       <a class="blend__cta" href="#retailers">Find a Retailer <i class="fa-solid fa-arrow-right-long"></i></a>
     </article>
 
-    <!-- La Mandarria — same footprint, dark treatment, "LIMITED" badge -->
+    <!-- La Mandarria — limited release, inline LIMITED badge at top of card -->
     <article class="blend blend--featured">
       <div class="blend__no">N° 06 · Limited Release</div>
+      <span class="blend__limited"><i class="fa-solid fa-hammer" aria-hidden="true"></i> Limited · 500 Boxes</span>
       <div class="blend__img-wrap"><img src="img/team/LaMandarria.png" alt="Casa Cuevas La Mandarria full-bodied limited edition cigar" loading="lazy" /></div>
       <h3 class="blend__title">Casa Cuevas <em>"La Mandarria"</em></h3>
-      <div class="blend__tag"><i class="fa-solid fa-hammer" aria-hidden="true"></i> Full-Bodied · Pig Tail · Shaggy Foot</div>
-      <p class="blend__desc">Our first full-bodied release. Ecuadorean Habano wrapper, pig tail, shaggy foot. Heavy-handed flavor. Limited to 500 boxes.</p>
+      <div class="blend__tag"><i class="fa-solid fa-fire" aria-hidden="true"></i> Full-Bodied · Pig Tail · Shaggy Foot</div>
+      <p class="blend__desc">Our first full-bodied release. Ecuadorean Habano wrapper, pig tail, shaggy foot. Heavy-handed flavor.</p>
       <div class="blend__specs">
         <div><span class="spec__label">Wrapper</span><span class="spec__value">Ecuador Habano</span></div>
         <div><span class="spec__label">Size</span><span class="spec__value">Toro 6×52 · 20ct</span></div>
@@ -2151,19 +2382,34 @@ address.footer-address { font-style: normal; }
   <div class="partners__inner">
     <h3>We've rolled for them. <em>Now we roll for you.</em></h3>
     <p class="partners__sub">Over decades, Tabacalera Las Lavas has manufactured premium cigars for notable brands. A short list of the work that built our reputation:</p>
-    <ul class="partners__list">
-      <li>Gurkha</li>
-      <li>Carlos Torano</li>
-      <li>Sam Leccia</li>
-      <li>Swinger</li>
-      <li>Vicarias</li>
-      <li>Bow Tie</li>
-      <li>Veritas</li>
-      <li>Good Karma</li>
-      <li>Cigars International</li>
-      <li>Thompson Cigar Group</li>
-    </ul>
   </div>
+  <div class="partners__carousel" role="region" aria-label="Partner brand logos, scrolling">
+    <div class="partners__track" id="partnersTrack">
+      <!-- Set A -->
+      <div class="logo-mark logo-mark--caps"><span class="mark">GURKHA</span></div>
+      <div class="logo-mark logo-mark--serif-italic"><span class="mark">Torañ<span style="font-style:normal;">o</span></span></div>
+      <div class="logo-mark logo-mark--script"><span class="mark">Sam Leccia</span></div>
+      <div class="logo-mark logo-mark--caps-thin"><span class="mark">SWINGER</span></div>
+      <div class="logo-mark logo-mark--serif"><span class="mark">Vicarias</span></div>
+      <div class="logo-mark logo-mark--ampersand"><span class="mark">Bow<span class="amp">·</span>Tie</span></div>
+      <div class="logo-mark logo-mark--mono"><span class="mark">Veritas</span></div>
+      <div class="logo-mark logo-mark--stacked"><span class="mark">Good<br/>Karma</span></div>
+      <div class="logo-mark logo-mark--caps"><span class="mark">CIGARS INT'L</span></div>
+      <div class="logo-mark logo-mark--serif"><span class="mark">Thompson</span></div>
+      <!-- Set B (duplicate for seamless loop) -->
+      <div class="logo-mark logo-mark--caps" aria-hidden="true"><span class="mark">GURKHA</span></div>
+      <div class="logo-mark logo-mark--serif-italic" aria-hidden="true"><span class="mark">Torañ<span style="font-style:normal;">o</span></span></div>
+      <div class="logo-mark logo-mark--script" aria-hidden="true"><span class="mark">Sam Leccia</span></div>
+      <div class="logo-mark logo-mark--caps-thin" aria-hidden="true"><span class="mark">SWINGER</span></div>
+      <div class="logo-mark logo-mark--serif" aria-hidden="true"><span class="mark">Vicarias</span></div>
+      <div class="logo-mark logo-mark--ampersand" aria-hidden="true"><span class="mark">Bow<span class="amp">·</span>Tie</span></div>
+      <div class="logo-mark logo-mark--mono" aria-hidden="true"><span class="mark">Veritas</span></div>
+      <div class="logo-mark logo-mark--stacked" aria-hidden="true"><span class="mark">Good<br/>Karma</span></div>
+      <div class="logo-mark logo-mark--caps" aria-hidden="true"><span class="mark">CIGARS INT'L</span></div>
+      <div class="logo-mark logo-mark--serif" aria-hidden="true"><span class="mark">Thompson</span></div>
+    </div>
+  </div>
+  <p class="partners__footnote">Rendered as typographic marks · Replace with licensed logo artwork when provided</p>
 </section>
 
 <!-- =====================================================
@@ -2242,7 +2488,7 @@ address.footer-address { font-style: normal; }
     <div>
       <div class="retailers__eyebrow">Find a Casa Cuevas Tobacconist</div>
       <h2>A Cuevas <em>near you.</em></h2>
-      <p class="retailers__body">Casa Cuevas is sold through premium tobacconists in seven U.S. states and three countries. Call our Miami office for the closest shop to you — we keep an up-to-date list and can usually point you to a humidor within a 30-minute drive.</p>
+      <p class="retailers__body">Casa Cuevas is sold through 153 premium tobacconists across 23 U.S. states plus Washington DC, Puerto Rico, and New Zealand. Pick your state to see the shops closest to you — or call our Miami office and we will point you to a humidor within a 30-minute drive.</p>
       <div class="retailers__btns">
         <a class="btn btn--primary" href="tel:+17865657977"><i class="fa-solid fa-phone-volume"></i> (786) 565-7977</a>
         <a class="btn btn--ghost-light" href="mailto:info@casacuevascigars.com">Email the Shop</a>
@@ -2250,17 +2496,43 @@ address.footer-address { font-style: normal; }
     </div>
 
     <div>
-      <div class="retailers__regions">
-        <div class="region"><span class="region__name"><i class="fa-solid fa-location-crosshairs" style="color:var(--gold);margin-right:8px;"></i>Florida</span><span class="region__count">37</span></div>
-        <div class="region"><span class="region__name"><i class="fa-solid fa-location-crosshairs" style="color:var(--gold);margin-right:8px;"></i>Arizona</span><span class="region__count">20</span></div>
-        <div class="region"><span class="region__name"><i class="fa-solid fa-location-crosshairs" style="color:var(--gold);margin-right:8px;"></i>Virginia</span><span class="region__count">13</span></div>
-        <div class="region"><span class="region__name"><i class="fa-solid fa-location-crosshairs" style="color:var(--gold);margin-right:8px;"></i>Texas</span><span class="region__count">15</span></div>
-        <div class="region"><span class="region__name"><i class="fa-solid fa-location-crosshairs" style="color:var(--gold);margin-right:8px;"></i>Colorado</span><span class="region__count">1</span></div>
-        <div class="region"><span class="region__name"><i class="fa-solid fa-location-crosshairs" style="color:var(--gold);margin-right:8px;"></i>Washington DC</span><span class="region__count">1</span></div>
-        <div class="region"><span class="region__name"><i class="fa-solid fa-ship" style="color:var(--gold);margin-right:8px;"></i>Puerto Rico</span><span class="region__count">1</span></div>
-        <div class="region"><span class="region__name"><i class="fa-solid fa-ship" style="color:var(--gold);margin-right:8px;"></i>New Zealand</span><span class="region__count">1</span></div>
+      <div class="retailers__picker" id="retailersPicker" role="tablist" aria-label="Retailer states">
+        <button type="button" class="state-btn is-active" data-state="Florida" aria-pressed="true"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Florida</span><span class="state-btn__count">36</span></button>
+        <button type="button" class="state-btn" data-state="Arizona" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Arizona</span><span class="state-btn__count">20</span></button>
+        <button type="button" class="state-btn" data-state="Colorado" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Colorado</span><span class="state-btn__count">1</span></button>
+        <button type="button" class="state-btn" data-state="Georgia" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Georgia</span><span class="state-btn__count">3</span></button>
+        <button type="button" class="state-btn" data-state="Hawaii" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Hawaii</span><span class="state-btn__count">1</span></button>
+        <button type="button" class="state-btn" data-state="Iowa" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Iowa</span><span class="state-btn__count">4</span></button>
+        <button type="button" class="state-btn" data-state="Kansas" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Kansas</span><span class="state-btn__count">4</span></button>
+        <button type="button" class="state-btn" data-state="Kentucky" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Kentucky</span><span class="state-btn__count">2</span></button>
+        <button type="button" class="state-btn" data-state="Maryland" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Maryland</span><span class="state-btn__count">9</span></button>
+        <button type="button" class="state-btn" data-state="Massachusetts" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Massachusetts</span><span class="state-btn__count">1</span></button>
+        <button type="button" class="state-btn" data-state="Nebraska" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Nebraska</span><span class="state-btn__count">1</span></button>
+        <button type="button" class="state-btn" data-state="Nevada" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Nevada</span><span class="state-btn__count">4</span></button>
+        <button type="button" class="state-btn" data-state="New Jersey" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> New Jersey</span><span class="state-btn__count">13</span></button>
+        <button type="button" class="state-btn" data-state="New Mexico" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> New Mexico</span><span class="state-btn__count">5</span></button>
+        <button type="button" class="state-btn" data-state="New York" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> New York</span><span class="state-btn__count">3</span></button>
+        <button type="button" class="state-btn" data-state="North Carolina" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> North Carolina</span><span class="state-btn__count">1</span></button>
+        <button type="button" class="state-btn" data-state="Ohio" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Ohio</span><span class="state-btn__count">2</span></button>
+        <button type="button" class="state-btn" data-state="Oklahoma" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Oklahoma</span><span class="state-btn__count">2</span></button>
+        <button type="button" class="state-btn" data-state="Pennsylvania" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Pennsylvania</span><span class="state-btn__count">8</span></button>
+        <button type="button" class="state-btn" data-state="Tennessee" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Tennessee</span><span class="state-btn__count">2</span></button>
+        <button type="button" class="state-btn" data-state="Texas" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Texas</span><span class="state-btn__count">15</span></button>
+        <button type="button" class="state-btn" data-state="Virginia" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Virginia</span><span class="state-btn__count">13</span></button>
+        <button type="button" class="state-btn" data-state="Washington DC" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-location-crosshairs"></i> Washington DC</span><span class="state-btn__count">1</span></button>
+        <button type="button" class="state-btn" data-state="Puerto Rico" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-ship"></i> Puerto Rico</span><span class="state-btn__count">1</span></button>
+        <button type="button" class="state-btn" data-state="New Zealand" aria-pressed="false"><span class="state-btn__name"><i class="fa-solid fa-ship"></i> New Zealand</span><span class="state-btn__count">1</span></button>
       </div>
-      <p style="margin-top:18px;font-size:0.84rem;color:rgba(235,223,195,0.6);"><i class="fa-solid fa-circle-info" style="color:var(--gold);margin-right:6px;"></i>Retailer counts reflect accounts listed on our current site. <span style="color:var(--gold-bright);">[VERIFY COUNTS MONTHLY]</span></p>
+
+      <div class="retailers__results" id="retailersResults" aria-live="polite">
+        <div class="retailers__results-head">
+          <div class="retailers__results-title">Tobacconists in <em id="retailersState">Florida</em></div>
+          <div class="retailers__results-count" id="retailersCount">36 shops</div>
+        </div>
+        <div class="shop-list" id="retailersList"></div>
+      </div>
+
+      <p style="margin-top:18px;font-size:0.84rem;color:rgba(235,223,195,0.6);"><i class="fa-solid fa-circle-info" style="color:var(--gold);margin-right:6px;"></i>List pulled from casacuevascigars.com. <span style="color:var(--gold-bright);">Call us to confirm stock before you drive.</span></p>
     </div>
   </div>
 </section>
@@ -2492,6 +2764,63 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
+/* =============================
+   Retailer state filter
+============================= */
+const RETAILERS = {"Arizona":{"count":20,"retailers":[{"name":"Red Beard Cigars","phone":"928-646-0237","address":"1329 E. State Rte 89A Suite B Cottonwood, AZ 86326"},{"name":"RJ's Cigars","phone":"602-291-7275","address":"6655 E. McDowell Rd. Suite 112 Mesa, AZ 85215"},{"name":"Smoke and Joe's Lounge","phone":"480-563-8543","address":"29850 N Tatum Blvd. #115  Cave Creek, AZ 85331"},{"name":"The Yard Cigar Bar","phone":"480-628-7721","address":"1981 W. Elliot Rd  Chandler, AZ 85524"},{"name":"Ye Olde Pipe and Tobacco","phone":"602-561-0929","address":"4525 N. 24th St. #110  Phoenix, AZ 85016"},{"name":"Park Plaza Liquor","phone":"928-713-6794","address":"402 W. Goodwin St.  Prescott, AZ 86303"},{"name":"iSpy Cigars","phone":"623-937-0887","address":"6729 N 57th Dr. Unit C  Glendale, AZ 85301"},{"name":"Cigars 'N' Such","phone":"480-816-9055","address":"16747 E Parkway Ave #3  Fountain Hills, AZ 85268"},{"name":"Cedar Room","phone":"480-292-8546","address":"Suite F-100  Scottsdale, AZ 85255"},{"name":"Skallywag Cigars","phone":"480-907-6833","address":"7070 E 5th Ave, Scottsdale, AZ 85251"},{"name":"Puro Cigar Bar","phone":"480-600-6362","address":"111 W Boston St  Chandler AZ 85225"},{"name":"Cigar Warehouse","phone":"480-632-2262","address":"2826 E Baseline Rd  Mesa AZ 85204"},{"name":"Cigar Warehouse","phone":"520-531-1702","address":"6064 N. Oracle Rd  Tucson AZ 85704"},{"name":"Cigar Warehouse","phone":"602-547-9600","address":"4227 W. Bell Rd  Phoenix AZ 85053"},{"name":"Don's Cigars","phone":"602-705-9606","address":"5036 N Central Ave  Phoenix AZ 85012"},{"name":"Fumar Cigars","phone":"623-594-4020","address":"2010 W. Parkside Lane Suite 110 Phoenix AZ 85027"},{"name":"Cigar Inn","phone":"602-955-1766","address":"4830 N. 16th St.  Phoneix AZ 85016"},{"name":"Cigar King","phone":"480-214-0238","address":"7830 E Gelding Dr. Suite 100 Scottsdale AZ 85260"},{"name":"Cigars Daily","phone":"602-703-1194","address":"2530 E Bell Rd suite a, Phoenix, AZ 85032"},{"name":"Cigars 'N' Such","phone":"480-816-9055","address":"16747 E Parkview Ave, Fountain Hills, AZ 85268"}]},"Colorado":{"count":1,"retailers":[{"name":"Robusto Room","phone":"720-561-9535","address":"9535 Park Meadows Dr  Lone Tree, CO 80124"}]},"Florida":{"count":36,"retailers":[{"name":"Royal Cigars","phone":"786-443-6029","address":"501 S. Federal Hwy #1405  Hallandale Beach, FL 33009"},{"name":"Come Smoke With Us, Inc.","phone":"786-402-5264","address":"8353 Bird Rd.  Miami, FL 33155"},{"name":"Ash Tap Room","phone":"407-483-6659","address":"3595 S Orange Dr  Orlando, FL 32806"},{"name":"Aromas Cigars","phone":"904-704-9748","address":"4372 Southside Blvd., Suite 101  Jacksonville, FL 32216"},{"name":"Cutters Cigar","phone":"813-319-4242","address":"715 W Lumsden Rd  Brandon FL 33511"},{"name":"Fusion Cigar Lounge","phone":"813-777-9920","address":"483 Mandalay Ave  Clearwater FL 33767"},{"name":"Gables Cigars Shop","phone":"305-301-3733","address":"2324 Salzedo St  Coral Gables FL 33134"},{"name":"Cigar Room Davie","phone":"561-234-7190","address":"6341 Sterling Rd  Davie FL 33314"},{"name":"Daytona Cigar Club","phone":"356-320-1863","address":"200 S. Beach St.  Daytona Beach FL 32114"},{"name":"Cigar Hustler","phone":"386-574-3556","address":"829 Deltona Blvd  Deltona FL 32725"},{"name":"Miura Cigars","phone":"305-470-4552","address":"2555 NW 102nd Ave  Doral FL 33172"},{"name":"Holy Smokes Cigar & Pipe Shop","phone":"904-885-2525","address":"3921 Hendricks Ave  Jacksonville FL 32207"},{"name":"Los Parados Restaurant, Inc","phone":"305-903-5928","address":"5394 NW 72 Ave  Miami FL 33166"},{"name":"Cava Cigars","phone":"305-668-0303","address":"7170 SW 42 Street  Miami FL 33155"},{"name":"Manny's Cigars","phone":"","address":"261 Westward Dr Suite 111 Miami FL 33166"},{"name":"Neptune Cigars","phone":"","address":"3420 NW 7th St  Miami FL 33125"},{"name":"Neptune Cigars","phone":"","address":"9308 S. Dixie Hwy  Miami FL 33156"},{"name":"Neptune Cigars","phone":"","address":"2325 South Federal Hwy  Ft. Lauderdale FL 33316"},{"name":"Ashes Cigar & Lounge","phone":"","address":"12305 SW 137th Ave Suite 306 Miami FL 33186"},{"name":"Caribbean Cigars","phone":"305-553-4560","address":"14243 SW 42 St  Miami FL 33175"},{"name":"Cigar Boutique of Little Havana","phone":"305-904-1470","address":"1100 SW 8th St  Miami FL 33130"},{"name":"Cigar Cellar","phone":"305-915-8838","address":"1557 Sunset Dr  Miami FL 33143"},{"name":"Cuban Crafters","phone":"877-244-2701","address":"3604 NW 7th St  Miami FL 33125"},{"name":"Family Cigar Shop","phone":"786-715-3485","address":"5100 NW 72nd Ave  Miami FL 33166"},{"name":"Master Cigars","phone":"","address":"14040 SW 8th St  Miami FL 33184"},{"name":"Prime Cigar Brickell","phone":"","address":"1106 South Miami Ave, Unit 202  Miami FL 33130"},{"name":"Miami Beach International, LLC","phone":"206-413-0713","address":"500 South Pointe Dr. #220  Miami Beach FL 33139"},{"name":"Casablanca Cigar Lounge","phone":"","address":"500 S Pointe Dr Suite 160 Miami Beach FL 33139"},{"name":"Espanola Cigars","phone":"917-804-3319","address":"409 Espanola Way  Miami Beach FL 33139"},{"name":"Havana Group Cigars","phone":"305-825-5827","address":"15458 NW 77th Ct  Miami Lakes FL 33016"},{"name":"Big Smoke","phone":"386-673-5311","address":"119 W Granada Blvd  Ormond Beach FL 32164"},{"name":"Tobacco Locker","phone":"941-255-8825","address":"17506 Brighton Ave Unit E  Port Charlotte FL 33954"},{"name":"Black Dog Cigar Box","phone":"772-287-5060","address":"3343 SE Federal Highway  Stuart FL 34997"},{"name":"Tampa Humidor","phone":"813-990-8535","address":"1418 E. Busch Blvd  Tampa FL 33612"},{"name":"Thompson Cigar Co.","phone":"813-884-6344","address":"5550 Airport Blvd Suite B Tampa FL 33634"},{"name":"Wellington Cigars, LLC","phone":"786-879-6341","address":"174 S. State RD 7  Wellington FL 33414"}]},"Georgia":{"count":3,"retailers":[{"name":"Life N Times","phone":"","address":"2508 Kickerillo Way SE  Atlanta GA 30316"},{"name":"5 Points Cigars","phone":"706-549-3100","address":"1720 Epps Bridge Pkwy Suite 401 Athens, GA 30606"},{"name":"Smokehouse Cigars, LLC","phone":"404-542-3024","address":"1936 Hosea L Williams Dr  Atlanta, GA 30317"}]},"Hawaii":{"count":1,"retailers":[{"name":"Westside Cigars","phone":"808-620-5863","address":"91-1771 Kupeleko Pl  Ewa Beach HI 96706"}]},"Iowa":{"count":4,"retailers":[{"name":"David's Fine Tobaccos","phone":"515-278-8701","address":"9759 University Ave  Clive IA 50325"},{"name":"Waverly Golf & Country Club","phone":"319-352-3855","address":"705 8th St NW  Waverly IA 50677"},{"name":"Prairie Links Golf & Events Center","phone":"319-415-3554","address":"19 Eagle Ridge Drive  Waverly IA 50677"},{"name":"Club Herf, LLC","phone":"802-734-1045","address":"9500 University Avenue Suite 1101 West Des Moines IA 50266"}]},"Kansas":{"count":4,"retailers":[{"name":"Cigar Chateau","phone":"316-636-2433","address":"3049 N Rock Road  Wichita, KS 67226"},{"name":"Auburn Cigars","phone":"","address":"13303 W. Maple St. #111  Wichita, KS 67235"},{"name":"The Humidor East","phone":"","address":"2221 N Woodlawn Blvd  Wichita KS 67220"},{"name":"The Humidor","phone":"316-440-4890","address":"8558 W 21st St N  Wichita KS 67205"}]},"Kentucky":{"count":2,"retailers":[{"name":"The Party Source","phone":"859-291-4007","address":"95 Riviera Drive  Bellevue, KY 41073"},{"name":"Leaf & Cedar, LLC","phone":"502-594-9369","address":"8605 Smyma Pkwy Unit 105 Louisville KY 40228"}]},"Maryland":{"count":9,"retailers":[{"name":"Cigars 210","phone":"240-493-6668","address":"12754 Old Fort Road  Fort Washington, MD 20744"},{"name":"The Toasted Foot Lounge","phone":"240-237-8938","address":"20845 Callaway Village Way  Callaway, MD 20620"},{"name":"Thomas Supply Trade","phone":"301-776-1517","address":"604 Main Street  Laurel, MD 20707"},{"name":"Cross Street Tobacco","phone":"410-752-9220","address":"1103 Light Street  Baltimore MD 21230"},{"name":"Aphelion Cigar Lounge","phone":"410-721-1700","address":"2510 Conway Road  Gambrills MD 21054"},{"name":"Leonardtown Cigars","phone":"240-309-4108","address":"40955 Merchant Lane  Leonardtown MD 20650"},{"name":"Burnt Leaf Cigars","phone":"443-272-7206","address":"9029 Liberty Road  Randalltown MD 21133"},{"name":"Dans Cigar Lounge","phone":"410-780-5459","address":"8300-B Pulaski Hwy  Rosedale MD 21237"},{"name":"Tinderbox Waldorf","phone":"301-374-9100","address":"2745 Crain Hwy  Waldorf MD 20601"}]},"Massachusetts":{"count":1,"retailers":[{"name":"Cigar Room II","phone":"4132858078","address":"51 Springfield St. Agawam, MA 01001"}]},"Nebraska":{"count":1,"retailers":[{"name":"Reserve De La Guardia","phone":"","address":"217 S 169th Cir  Omaha NE 68118"}]},"Nevada":{"count":4,"retailers":[{"name":"La Casa Cigars and Lounge","phone":"702-407-1171","address":"430 S Rampart Blvd. Suite 170  Las Vegas, NV 89145"},{"name":"LV Paiute Tribal Cigar Shoppe","phone":"","address":"1225 North Main St  Las Vegas, NV 89101"},{"name":"En Fuego Cigars - LV","phone":"702-460-7600","address":"328 W. Sahara Ave  Las Vegas NV 89102"},{"name":"Las Vegas Cigar Outlet","phone":"702-460-7600","address":"1560 E Sahara Ave, Las Vegas, NV 89104"}]},"New Jersey":{"count":13,"retailers":[{"name":"Churchill's Tobacco Shop","phone":"856-428-7361","address":"1201 Kings Hwy N  Cherry Hill, NJ 08034"},{"name":"Cigars at Cibao","phone":"732-215-5300","address":"117 Smith St  Perth Amboy, NJ 08861"},{"name":"Delaware Cigars","phone":"302.650.8998","address":"760 S. Delsea Dr  Vineland, NJ 08360"},{"name":"Fanatix Cigar House","phone":"201-845-7833","address":"20 Essex St  Lodi, NJ 07644"},{"name":"Havana on the Hudson","phone":"201-867-3300","address":"1907 Willow Ave  Weehawken, NJ 07086"},{"name":"Heritage Premium Cigars","phone":"856-988-7665","address":"107 Merchants Way  Marlton, NJ 08053"},{"name":"Railroad Cigars","phone":"973-344-8400","address":"188 Pulaski St  Newark, NJ 07105"},{"name":"Sky Tobacco","phone":"201-432-4071","address":"344 Grove St. #1  Jersey City, NJ 07302"},{"name":"Smokes Cigar Club","phone":"862-849-2030","address":"436 Harrison Ave. B.  Harrison, NJ 07029"},{"name":"Sticks Cigars","phone":"732-540-8500","address":"1513 Main St  Rahway, NJ 07065"},{"name":"The Cave Cigar Lounge","phone":"973-900-5347","address":"1425 McCarter Hwy  Newark, NJ 07104"},{"name":"38 Tobacco Mart","phone":"609-634-5476","address":"461 Route 38 West,   Maple Shade NJ 08052"},{"name":"Cigar Alley @ The News Nook","phone":"856-669-9190","address":"17 S Centre St  Merchantville NJ 08109"}]},"New Mexico":{"count":5,"retailers":[{"name":"The Humidor NM","phone":"575-356-8618","address":"416 S Avenue C  Portales, NM 88130"},{"name":"Jake & Harleys Cigar Gallery","phone":"505-301-3164","address":"5400 Sevilla Ave NW  Abuqueque NM 87120"},{"name":"Havana House","phone":"505-797-9688","address":"7600 Jefferson St #7  Albuquerque NM 87109"},{"name":"Monte's Cigars & Tobacco","phone":"505-881-7999","address":"3636 San Mateo Blvd NE  Albuquerque NM 87110"},{"name":"Primo Cigar Shop","phone":"505-954-1168","address":"328 Sandoval St.  Santa Fe NM 84501"}]},"New York":{"count":3,"retailers":[{"name":"Cave Cigar Lounge","phone":"646-998-4859","address":"45 Vermilyea Ave #47  New York, NY 10034"},{"name":"Maxi's Cigar Shop","phone":"516-505-1489","address":"749 Hempstead Turnpike  Franklin Square, NY 11010"},{"name":"Moises Cigars","phone":"347-920-4622","address":"306 W 231 St  Bronx, NY 10463"}]},"North Carolina":{"count":1,"retailers":[{"name":"Craft Wilmington","phone":"336-847-8300","address":"4718 Oleander Dr.  Wilmington, NC 28403"}]},"Ohio":{"count":2,"retailers":[{"name":"Jungle Jim's Market","phone":"5136746000","address":"5440 Dixie Hwy. Fairfield, OH 45014"},{"name":"Royal 10 Cigar & Tobacco","phone":"4403900020","address":"6401 Royalton Rd. North Royalton, OH 44133"}]},"Oklahoma":{"count":2,"retailers":[{"name":"Omerta Cigar Co.","phone":"405-600-3499","address":"7700 S. Western Suite A Oklahoma City, OK 73139"},{"name":"Tobacco Exchange","phone":"405-843-1688","address":"2836 NW 63rd St  Oklahoma City OK 73116"}]},"Pennsylvania":{"count":8,"retailers":[{"name":"Cappelli Bros. Cigar Co.","phone":"267-446-0586","address":"211 S 13th St  Philadelphia, PA 19107"},{"name":"Famous Smoke Shop - PA","phone":"610-559-7000","address":"90 Mort Drive  Easton, PA 18040"},{"name":"Joey' D Sala Da Fumo","phone":"724-516-6023","address":"325 McKinley Ave  Latrobe, PA 156501"},{"name":"Smokin Brews, LLC","phone":"412-480-3310","address":"4055 Liberty Ave  Pittsburgh, PA 15224"},{"name":"Stogiebird.com","phone":"412-999-3226","address":"5105 Berlin Way  Pittsburgh, PA 15201"},{"name":"Cigars International - Bethlehem","phone":"8882442790","address":"4078 Nazareth Pike Bethlehem, PA 18020"},{"name":"Cigars International - Hamburg","phone":"8882442790","address":"1635 Mountain Road Hamburg, PA 19526"},{"name":"Cigars International - Downtown","phone":"8882442790","address":"535 Main Street Bethlehem, PA 18018"}]},"Tennessee":{"count":2,"retailers":[{"name":"Battleground South Cigar Lounge","phone":"(931) 548.2171","address":"1020 South Garden Street  Columbia, TN 38401"},{"name":"Ricks Cigar Lounge","phone":"207-576-1006","address":"125 Eden Way Dr.  White House TN 37188"}]},"Texas":{"count":15,"retailers":[{"name":"Tx Distribution","phone":"805-305-0877","address":"114 County Road 2475  Alvord, TX 76225"},{"name":"The Smoke Ring","phone":"281-332-9871","address":"17066 Highway 3  Webster, TX 77598"},{"name":"Joseph's Coffee & Cigars","phone":"281-342-3819","address":"202 Morton St.  Richmond, TX 77469"},{"name":"Blue Smoke of Dallas","phone":"214-350-7553","address":"4560 W Mockingbird Lane Ste: 102 Dallas, TX 75203"},{"name":"In The Humidor","phone":"214-483-2227","address":"2150 N. Josey Lane  Carrollton TX 75006-2955"},{"name":"Mikes Cigar Room","phone":"936-271-0900","address":"8000 Highway 242 Ste 119  Conroe TX 77385"},{"name":"Blue Smoke of Dallas","phone":"214-350-7553","address":"4560 W Mockingbird Lane  Dallas TX 75203"},{"name":"Silverleaf","phone":"602-722-4037","address":"426 Commerce St.  Fort Worth TX 76102"},{"name":"Big Dave's Cigars","phone":"(817) 731-6433","address":"6501 Camp Bowie Blvd  Ft. Worth TX 76116"},{"name":"Underground Cigar Shop","phone":"817-507-3640","address":"3129 Erie St  Ft. Worth TX 76112"},{"name":"Cigar Towne","phone":"281-752-4427","address":"1127 Eldridge Parkway  Houston TX 77077"},{"name":"Cigar Emporium - TX","phone":"713-521-6478","address":"3514 S. Shepard  Houston TX 77098"},{"name":"Tobacco Junction","phone":"903-234-1212","address":"522 E Loop 281  Longview TX 75605"},{"name":"Mams Cigar Shop, LLC","phone":"210-658-6267","address":"107 E Wright Blvd  Universal City TX 78148-4437"},{"name":"3R's Cigars","phone":"972-572-4427","address":"100 S Main St. #116  Duncanville TX 75116"}]},"Virginia":{"count":13,"retailers":[{"name":"Village Tobacco","phone":"757-595-0405","address":"1900 George Washington Memorial Hwy #I Yorktown, VA 23693"},{"name":"Burke Cigars","phone":"703-440-0678","address":"9558 Old Keene Mill Rd  Burke VA 22015"},{"name":"Tobacconist & Gifts","phone":"434-973-9065","address":"341 Hillsdale Dr  Charlottesville, VA 22901"},{"name":"B&B Enterprise, Inc.","phone":"888-883-5596","address":"446221 Guilford Dr. #130  Ashburn, VA 20147"},{"name":"Hogshead Cigar Lounge","phone":"540-479-2420","address":"9849 Jefferson Davis Hwy  Fredricksburg VA 22407"},{"name":"Tobaccology","phone":"703-795-3330","address":"11001 Nokesville Road  Manassas VA 20110"},{"name":"Havana Connection - Midlothian","phone":"804-897-7307","address":"11645 Midlothian Turnpike   Midlothian VA 23113"},{"name":"Havana Connection - Swift Creek","phone":"804-739-7301","address":"6181 Harbourside Centre Loop  Midlothian VA 23112"},{"name":"Havana Connection - Short Pump","phone":"804-364-5711","address":"11616 West Broad St.  Richmond VA 23233"},{"name":"Havana Connection - Westrbury","phone":"804-673-6523","address":"8801-E Three Chopt Road  Richmond VA 23229"},{"name":"Tabb Tobacco","phone":"757-332-6464","address":"400 Commerce Circle #B  Tabb VA 23693"},{"name":"Cigar & More","phone":"703-255-4785","address":"320 E. Maple Ave.  Vienna VA 22180"},{"name":"Havana Connection - Williamsburg","phone":"757-229-4060","address":"4920 Courthouse Street  Williamsburg VA 23188"}]},"Washington DC":{"count":1,"retailers":[{"name":"Nomad Shop","phone":"202-396-3037","address":"1202 H Street, NE  Washington DC 20002"}]},"Puerto Rico":{"count":1,"retailers":[{"name":"Cigar House","phone":"787-671-1682","address":"257 Fortaleza St.  Old San Juan, PR 00901"}]},"New Zealand":{"count":1,"retailers":[{"name":"Canteros New Zealand","phone":"","address":"208 Burwood Road Burwood, Christchurch New Zealand 8083"}]}};
+const retailersPicker = document.getElementById('retailersPicker');
+const retailersState = document.getElementById('retailersState');
+const retailersCount = document.getElementById('retailersCount');
+const retailersList = document.getElementById('retailersList');
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+}
+
+function renderRetailers(state) {
+  const entry = RETAILERS[state];
+  if (!entry) return;
+  retailersState.textContent = state;
+  const n = entry.retailers.length;
+  retailersCount.textContent = n + (n === 1 ? ' shop' : ' shops');
+  if (!n) {
+    retailersList.innerHTML = '<div class="retailers__empty">No listed tobacconists. Call our Miami office — we can point you to the nearest shop.</div>';
+    return;
+  }
+  retailersList.innerHTML = entry.retailers.map(r => {
+    const phoneDigits = (r.phone || '').replace(/[^0-9+]/g, '');
+    const phoneBlock = phoneDigits
+      ? '<a class="shop__phone" href="tel:' + escapeHtml(phoneDigits) + '"><i class="fa-solid fa-phone-volume"></i> ' + escapeHtml(r.phone) + '</a>'
+      : '<span class="shop__phone" style="color:rgba(235,223,195,0.4);font-style:italic;">Call for details</span>';
+    const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(r.name + ' ' + r.address);
+    return (
+      '<div class="shop">' +
+        '<div class="shop__name">' + escapeHtml(r.name) + '</div>' +
+        phoneBlock +
+        '<div class="shop__address"><i class="fa-solid fa-location-dot"></i>' +
+          '<a href="' + mapsUrl + '" target="_blank" rel="noopener">' + escapeHtml(r.address) + '</a>' +
+        '</div>' +
+      '</div>'
+    );
+  }).join('');
+}
+
+retailersPicker.addEventListener('click', (e) => {
+  const btn = e.target.closest('.state-btn');
+  if (!btn) return;
+  retailersPicker.querySelectorAll('.state-btn').forEach(b => {
+    b.classList.remove('is-active');
+    b.setAttribute('aria-pressed', 'false');
+  });
+  btn.classList.add('is-active');
+  btn.setAttribute('aria-pressed', 'true');
+  renderRetailers(btn.dataset.state);
+});
+
+// Initial render (Florida)
+renderRetailers('Florida');
+
 </script>
 </body>
 </html>
