@@ -361,8 +361,10 @@ a:hover { color: var(--gold); }
 .mobile-menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(18, 12, 6, 0.6);
-  z-index: 98;
+  background: rgba(18, 12, 6, 0.68);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  z-index: 190;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s var(--ease), visibility 0.3s var(--ease);
@@ -376,7 +378,7 @@ a:hover { color: var(--gold); }
   width: min(360px, 92vw);
   background: linear-gradient(180deg, #1a120a 0%, var(--espresso) 100%);
   color: var(--parchment);
-  z-index: 99;
+  z-index: 200;
   display: flex;
   flex-direction: column;
   padding: 28px 28px 32px;
@@ -391,24 +393,29 @@ a:hover { color: var(--gold); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 22px;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(207, 166, 61, 0.22);
   margin-bottom: 22px;
+  min-height: 54px;
 }
-.mobile-menu__logo img { height: 46px; width: auto; display: block; filter: brightness(0) invert(1); }
+.mobile-menu__logo { display: block; line-height: 0; }
+.mobile-menu__logo img { height: 54px; width: auto; display: block; filter: brightness(0) invert(1); }
 .mobile-menu__close {
   background: transparent;
-  border: 1px solid rgba(207, 166, 61, 0.4);
-  width: 40px;
-  height: 40px;
+  border: 1px solid rgba(207, 166, 61, 0.45);
+  width: 42px;
+  height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--parchment);
+  color: var(--gold-bright);
   cursor: pointer;
-  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: border-color 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
 }
-.mobile-menu__close:hover { border-color: var(--gold-bright); background: rgba(207, 166, 61, 0.1); }
+.mobile-menu__close i { font-size: 1.1rem; }
+.mobile-menu__close:hover { border-color: var(--gold-bright); background: rgba(207, 166, 61, 0.12); color: var(--parchment); }
 .mobile-menu__tel {
   display: flex;
   align-items: center;
@@ -497,26 +504,20 @@ a:hover { color: var(--gold); }
   align-items: center;
 }
 .hero__content { position: relative; }
-.hero__tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-family: "Hanken Grotesk", sans-serif;
-  font-weight: 500;
-  font-size: 0.78rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
+.hero__byline {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-variation-settings: "opsz" 72, "SOFT" 100, "WONK" 1;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
   color: var(--gold-bright);
   margin-bottom: 22px;
+  letter-spacing: 0.01em;
+  display: inline-block;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gold);
   opacity: 0;
   animation: fadeUp 0.8s var(--ease) 0.1s forwards;
 }
-.hero__tag::before, .hero__tag::after {
-  content: "";
-  height: 1px; width: 34px;
-  background: var(--gold);
-}
-.hero__tag::after { display: none; }
 .hero h1 {
   color: var(--parchment);
   font-size: clamp(2.4rem, 5.6vw, 5rem);
@@ -551,7 +552,7 @@ a:hover { color: var(--gold); }
   animation: fadeUp 1s var(--ease) 0.6s forwards;
 }
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-.hero__tag, .hero h1, .hero__sub, .hero__ctas { transform: translateY(18px); }
+.hero__byline, .hero h1, .hero__sub, .hero__ctas { transform: translateY(18px); }
 
 /* Signature element: FOUR GENERATIONS interactive heritage card */
 .heritage-card {
@@ -1058,6 +1059,9 @@ a:hover { color: var(--gold); }
   min-height: 560px;
 }
 .blend:hover { background: var(--parchment-warm); }
+.blend__expand,
+.blend__collapse-toggle { display: none; }
+.blend__body { display: contents; }
 
 .blend--featured {
   position: relative;
@@ -1570,14 +1574,6 @@ a:hover { color: var(--gold); }
   font-style: italic;
   margin: 0 4px;
 }
-.partners__footnote {
-  margin-top: 24px;
-  font-size: 0.78rem;
-  color: var(--ink-soft);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 /* =================================================================
    TESTIMONIALS / FACTORY NOTES (varied layout, not a grid)
 ================================================================= */
@@ -2172,7 +2168,7 @@ address.footer-address { font-style: normal; }
   .hero { min-height: auto; padding: 120px 0 56px; }
   .hero__inner { grid-template-columns: 1fr; gap: 36px; }
   .hero__bg { background-position: 30% center; }
-  .hero__eyebrow { justify-content: center; text-align: center; }
+  .hero__byline { text-align: center; align-self: center; }
   .hero h1 { text-align: center; }
   .hero__subline, .hero__ctas { text-align: center; justify-content: center; }
   .hero__ctas { flex-wrap: wrap; }
@@ -2185,17 +2181,40 @@ address.footer-address { font-style: normal; }
   .legacy__caption { position: static; margin-top: 18px; max-width: none; }
   .blends__head { grid-template-columns: 1fr; gap: 20px; }
   /* 2-column grid on mobile per user request */
-  .blends__grid { grid-template-columns: 1fr 1fr; gap: 1px; padding: 0 20px; }
-  .blend { min-height: 0; padding: 26px 18px 24px; }
+  .blends__grid { grid-template-columns: 1fr 1fr; grid-auto-rows: auto; gap: 1px; padding: 0 20px; }
+  .blend { min-height: 0; padding: 22px 14px 18px; }
   .blend__img-wrap { margin: 0 -4px 14px; }
-  .blend__img-wrap img { max-height: 140px; }
-  .blend__title { font-size: 1.12rem; }
-  .blend__desc { font-size: 0.88rem; margin-bottom: 18px; }
-  .blend__specs { grid-template-columns: 1fr 1fr; gap: 10px; padding-top: 14px; margin-bottom: 16px; }
-  .spec__label { font-size: 0.58rem; }
-  .spec__value { font-size: 0.84rem; }
-  .blend__cta { font-size: 0.72rem; }
-  .blend--featured .blend__limited { font-size: 0.56rem; padding: 4px 8px; }
+  .blend__img-wrap img { max-height: 130px; }
+  .blend__title { font-size: 1.02rem; line-height: 1.15; margin-bottom: 6px; }
+  .blend__no { font-size: 0.62rem; margin-bottom: 8px; }
+  .blend__tag { font-size: 0.62rem; letter-spacing: 0.12em; margin-bottom: 10px; }
+  .blend__desc { font-size: 0.86rem; margin-bottom: 14px; line-height: 1.5; }
+  .blend__specs { grid-template-columns: 1fr 1fr; gap: 8px; padding-top: 12px; margin-bottom: 14px; }
+  .spec__label { font-size: 0.56rem; margin-bottom: 2px; }
+  .spec__value { font-size: 0.78rem; }
+  .blend__cta { font-size: 0.68rem; }
+  .blend--featured .blend__limited { font-size: 0.54rem; padding: 3px 6px; letter-spacing: 0.14em; }
+  /* Collapsible body on mobile | show image + title + tag, tap to reveal */
+  .blend__expand {
+    display: inline-flex; align-items: center; justify-content: space-between;
+    gap: 8px; width: 100%; background: transparent; border: none;
+    padding: 8px 0 0; color: var(--cedar); cursor: pointer;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 0.68rem; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; border-top: 1px solid var(--rule);
+    margin-top: auto;
+  }
+  .blend__expand i { color: var(--gold); transition: transform 0.25s var(--ease); font-size: 0.72rem; }
+  .blend__expand[aria-expanded="true"] i { transform: rotate(45deg); }
+  .blend__body {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s var(--ease), opacity 0.3s var(--ease), margin-top 0.3s var(--ease);
+    margin-top: 0;
+  }
+  .blend.is-open .blend__body { max-height: 800px; opacity: 1; margin-top: 10px; }
   .reserva__inner { grid-template-columns: 1fr; gap: 36px; }
   .reserva__items { grid-template-columns: 1fr 1fr; gap: 14px; }
   .reserva__item { padding: 22px 18px; }
@@ -2313,7 +2332,7 @@ address.footer-address { font-style: normal; }
   <div class="hero__grain" aria-hidden="true"></div>
   <div class="hero__inner">
     <div class="hero__content">
-      <div class="hero__tag">★★★★ &nbsp;Family-owned Dominican cigar makers since the 1880s</div>
+      <div class="hero__byline">Familia Cuevas &middot; Cibao Valley &middot; desde 1880</div>
       <h1>Premium Cigars, Handmade by Four Generations of the <em>Cuevas Family in the Cibao Valley.</em></h1>
       <p class="hero__sub">Long-filler premium cigars rolled at <b style="color:var(--gold-bright);font-weight:500;">Tabacalera Las Lavas</b>, the Cuevas family factory in Santiago, Dominican Republic. After decades crafting cigars for Gurkha, Torano and other notable names, we bring them to you under our own name.</p>
       <div class="hero__ctas">
@@ -2427,12 +2446,15 @@ address.footer-address { font-style: normal; }
       <div class="blend__img-wrap"><img src="img/team/connecticus.png" alt="Casa Cuevas Connecticut cigar box" loading="lazy" /></div>
       <h3 class="blend__title">Casa Cuevas <em>Connecticut</em></h3>
       <div class="blend__tag"><i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i> Mild to Medium</div>
-      <p class="blend__desc">Ecuadorian Connecticut wrapper, Nicaraguan binder, Dominican–Nicaraguan filler. Subtle spice built for modern palates.</p>
-      <div class="blend__specs">
-        <div><span class="spec__label">Wrapper</span><span class="spec__value">Ecuador Conn.</span></div>
-        <div><span class="spec__label">Sizes</span><span class="spec__value">5×52 / 6×50 / 6×60</span></div>
+      <button class="blend__expand" type="button" aria-expanded="false"><span>View details</span><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+      <div class="blend__body">
+        <p class="blend__desc">Ecuadorian Connecticut wrapper, Nicaraguan binder, Dominican–Nicaraguan filler. Subtle spice built for modern palates.</p>
+        <div class="blend__specs">
+          <div><span class="spec__label">Wrapper</span><span class="spec__value">Ecuador Conn.</span></div>
+          <div><span class="spec__label">Sizes</span><span class="spec__value">5×52 / 6×50 / 6×60</span></div>
+        </div>
+        <a class="blend__cta" href="#retailers">Find a Retailer <i class="fa-solid fa-arrow-right-long"></i></a>
       </div>
-      <a class="blend__cta" href="#retailers">Find a Retailer <i class="fa-solid fa-arrow-right-long"></i></a>
     </article>
 
     <article class="blend">
@@ -2440,12 +2462,15 @@ address.footer-address { font-style: normal; }
       <div class="blend__img-wrap"><img src="img/team/habano.png" alt="Casa Cuevas Habano cigar box" loading="lazy" /></div>
       <h3 class="blend__title">Casa Cuevas <em>Habano</em></h3>
       <div class="blend__tag"><i class="fa-solid fa-fire-flame-simple" aria-hidden="true"></i> Medium</div>
-      <p class="blend__desc">Ecuadorian Habano wrapper, Nicaraguan binder, Dominican–Nicaraguan filler. A present spice that brings aficionados back.</p>
-      <div class="blend__specs">
-        <div><span class="spec__label">Wrapper</span><span class="spec__value">Ecuador Habano</span></div>
-        <div><span class="spec__label">Sizes</span><span class="spec__value">5×52 / 6×50 / 6×60</span></div>
+      <button class="blend__expand" type="button" aria-expanded="false"><span>View details</span><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+      <div class="blend__body">
+        <p class="blend__desc">Ecuadorian Habano wrapper, Nicaraguan binder, Dominican–Nicaraguan filler. A present spice that brings aficionados back.</p>
+        <div class="blend__specs">
+          <div><span class="spec__label">Wrapper</span><span class="spec__value">Ecuador Habano</span></div>
+          <div><span class="spec__label">Sizes</span><span class="spec__value">5×52 / 6×50 / 6×60</span></div>
+        </div>
+        <a class="blend__cta" href="#retailers">Find a Retailer <i class="fa-solid fa-arrow-right-long"></i></a>
       </div>
-      <a class="blend__cta" href="#retailers">Find a Retailer <i class="fa-solid fa-arrow-right-long"></i></a>
     </article>
 
     <article class="blend">
@@ -2453,12 +2478,15 @@ address.footer-address { font-style: normal; }
       <div class="blend__img-wrap"><img src="img/team/maduro.png" alt="Casa Cuevas Maduro cigar box" loading="lazy" /></div>
       <h3 class="blend__title">Casa Cuevas <em>Maduro</em></h3>
       <div class="blend__tag"><i class="fa-solid fa-droplet" aria-hidden="true"></i> Medium · Sweet &amp; Spicy</div>
-      <p class="blend__desc">Mexican San Andres wrapper, Nicaraguan binder, Colombian–Dominican–Nicaraguan fillers. Sweetness and balance.</p>
-      <div class="blend__specs">
-        <div><span class="spec__label">Wrapper</span><span class="spec__value">Mexican San Andres</span></div>
-        <div><span class="spec__label">Sizes</span><span class="spec__value">5×52 / 6×50 / 6×60</span></div>
+      <button class="blend__expand" type="button" aria-expanded="false"><span>View details</span><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+      <div class="blend__body">
+        <p class="blend__desc">Mexican San Andres wrapper, Nicaraguan binder, Colombian–Dominican–Nicaraguan fillers. Sweetness and balance.</p>
+        <div class="blend__specs">
+          <div><span class="spec__label">Wrapper</span><span class="spec__value">Mexican San Andres</span></div>
+          <div><span class="spec__label">Sizes</span><span class="spec__value">5×52 / 6×50 / 6×60</span></div>
+        </div>
+        <a class="blend__cta" href="#retailers">Find a Retailer <i class="fa-solid fa-arrow-right-long"></i></a>
       </div>
-      <a class="blend__cta" href="#retailers">Find a Retailer <i class="fa-solid fa-arrow-right-long"></i></a>
     </article>
 
     <!-- Row 2: Reserva pair + La Mandarria limited release -->
@@ -2467,12 +2495,15 @@ address.footer-address { font-style: normal; }
       <div class="blend__img-wrap"><img src="img/team/ToroNatural.png" alt="Cuevas Reserva Natural cigar" loading="lazy" /></div>
       <h3 class="blend__title">Cuevas Reserva <em>Natural</em></h3>
       <div class="blend__tag"><i class="fa-solid fa-leaf" aria-hidden="true"></i> Medium to Full</div>
-      <p class="blend__desc">Our flagship natural: Dominican Piloto Cubano binder, Dominican &amp; Ometepe Nicaraguan fillers. Balance at full strength.</p>
-      <div class="blend__specs">
-        <div><span class="spec__label">Binder</span><span class="spec__value">Piloto Cubano</span></div>
-        <div><span class="spec__label">Sizes</span><span class="spec__value">5×52 / 6×50 / 6¼×52</span></div>
+      <button class="blend__expand" type="button" aria-expanded="false"><span>View details</span><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+      <div class="blend__body">
+        <p class="blend__desc">Our flagship natural: Dominican Piloto Cubano binder, Dominican &amp; Ometepe Nicaraguan fillers. Balance at full strength.</p>
+        <div class="blend__specs">
+          <div><span class="spec__label">Binder</span><span class="spec__value">Piloto Cubano</span></div>
+          <div><span class="spec__label">Sizes</span><span class="spec__value">5×52 / 6×50 / 6¼×52</span></div>
+        </div>
+        <a class="blend__cta" href="#retailers">Find a Retailer <i class="fa-solid fa-arrow-right-long"></i></a>
       </div>
-      <a class="blend__cta" href="#retailers">Find a Retailer <i class="fa-solid fa-arrow-right-long"></i></a>
     </article>
 
     <article class="blend">
@@ -2480,12 +2511,15 @@ address.footer-address { font-style: normal; }
       <div class="blend__img-wrap"><img src="img/team/ToroMaduro.png" alt="Cuevas Reserva Maduro cigar" loading="lazy" /></div>
       <h3 class="blend__title">Cuevas Reserva <em>Maduro</em></h3>
       <div class="blend__tag"><i class="fa-solid fa-droplet" aria-hidden="true"></i> Medium to Full</div>
-      <p class="blend__desc">Mexican San Andres over Dominican Piloto Cubano, with Dominican &amp; Ometepe filler. The fullest Reserva expression.</p>
-      <div class="blend__specs">
-        <div><span class="spec__label">Wrapper</span><span class="spec__value">Mexican San Andres</span></div>
-        <div><span class="spec__label">Sizes</span><span class="spec__value">5×52 / 6×50 / 6¼×52</span></div>
+      <button class="blend__expand" type="button" aria-expanded="false"><span>View details</span><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+      <div class="blend__body">
+        <p class="blend__desc">Mexican San Andres over Dominican Piloto Cubano, with Dominican &amp; Ometepe filler. The fullest Reserva expression.</p>
+        <div class="blend__specs">
+          <div><span class="spec__label">Wrapper</span><span class="spec__value">Mexican San Andres</span></div>
+          <div><span class="spec__label">Sizes</span><span class="spec__value">5×52 / 6×50 / 6¼×52</span></div>
+        </div>
+        <a class="blend__cta" href="#retailers">Find a Retailer <i class="fa-solid fa-arrow-right-long"></i></a>
       </div>
-      <a class="blend__cta" href="#retailers">Find a Retailer <i class="fa-solid fa-arrow-right-long"></i></a>
     </article>
 
     <!-- La Mandarria | limited release, inline LIMITED badge at top of card -->
@@ -2495,12 +2529,15 @@ address.footer-address { font-style: normal; }
       <div class="blend__img-wrap"><img src="img/team/LaMandarria.png" alt="Casa Cuevas La Mandarria full-bodied limited edition cigar" loading="lazy" /></div>
       <h3 class="blend__title">Casa Cuevas <em>"La Mandarria"</em></h3>
       <div class="blend__tag"><i class="fa-solid fa-fire" aria-hidden="true"></i> Full-Bodied · Pig Tail · Shaggy Foot</div>
-      <p class="blend__desc">Our first full-bodied release. Ecuadorean Habano wrapper, pig tail, shaggy foot. Heavy-handed flavor.</p>
-      <div class="blend__specs">
-        <div><span class="spec__label">Wrapper</span><span class="spec__value">Ecuador Habano</span></div>
-        <div><span class="spec__label">Size</span><span class="spec__value">Toro 6×52 · 20ct</span></div>
+      <button class="blend__expand" type="button" aria-expanded="false"><span>View details</span><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+      <div class="blend__body">
+        <p class="blend__desc">Our first full-bodied release. Ecuadorean Habano wrapper, pig tail, shaggy foot. Heavy-handed flavor.</p>
+        <div class="blend__specs">
+          <div><span class="spec__label">Wrapper</span><span class="spec__value">Ecuador Habano</span></div>
+          <div><span class="spec__label">Size</span><span class="spec__value">Toro 6×52 · 20ct</span></div>
+        </div>
+        <a class="blend__cta" href="#retailers">Find La Mandarria <i class="fa-solid fa-arrow-right-long"></i></a>
       </div>
-      <a class="blend__cta" href="#retailers">Find La Mandarria <i class="fa-solid fa-arrow-right-long"></i></a>
     </article>
   </div>
 </section>
@@ -2615,7 +2652,6 @@ address.footer-address { font-style: normal; }
       <div class="logo-mark logo-mark--serif" aria-hidden="true"><span class="mark">Thompson</span></div>
     </div>
   </div>
-  <p class="partners__footnote">Rendered as typographic marks · Replace with licensed logo artwork when provided</p>
 </section>
 
 <!-- =====================================================
@@ -2911,21 +2947,29 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mobileMe
 mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
 
 /* =============================
-   Craft accordion: desktop open by default, mobile collapsed
+   Blend cards: tap-to-expand on mobile
+============================= */
+document.querySelectorAll('.blend__expand').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const blend = btn.closest('.blend');
+    if (!blend) return;
+    const open = blend.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.querySelector('span').textContent = open ? 'Hide details' : 'View details';
+  });
+});
+
+/* =============================
+   Craft accordion: desktop open by default, mobile fully collapsed
 ============================= */
 (function initCraftAccordion(){
   const steps = document.querySelectorAll('.craft__step');
   if (!steps.length) return;
   const mq = window.matchMedia('(min-width: 881px)');
   function sync(){
-    steps.forEach((s, i) => {
-      if (mq.matches) {
-        s.setAttribute('open', '');
-      } else {
-        // on mobile, leave first open for orientation, collapse the rest
-        if (i === 0) s.setAttribute('open', '');
-        else s.removeAttribute('open');
-      }
+    steps.forEach((s) => {
+      if (mq.matches) s.setAttribute('open', '');
+      else s.removeAttribute('open');
     });
   }
   sync();
