@@ -752,15 +752,6 @@ a:hover { color: var(--gold); }
   letter-spacing: -0.01em;
 }
 .tstat--primary .tstat__n { color: var(--gold); font-weight: 500; }
-.tstat__plus {
-  font-family: "Hanken Grotesk", sans-serif;
-  font-weight: 500;
-  font-size: 0.42em;
-  color: var(--cedar);
-  margin-left: 6px;
-  letter-spacing: 0.04em;
-  vertical-align: 0.35em;
-}
 .tstat__lbl {
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 500;
@@ -768,6 +759,15 @@ a:hover { color: var(--gold); }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ink-soft);
+}
+.tstat__sub {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  opacity: 0.82;
+  margin-top: 2px;
 }
 .tstat--claim { border-left: 1px solid var(--rule); padding-left: 24px; gap: 8px; }
 .tstat__kicker {
@@ -2492,8 +2492,9 @@ address.footer-address { font-style: normal; }
         <span class="tstat__lbl">Tobacconists carrying Casa Cuevas</span>
       </div>
       <div class="tstat">
-        <span class="tstat__n">22<span class="tstat__plus">+ DC</span></span>
-        <span class="tstat__lbl">U.S. states &middot; Puerto Rico &middot; New Zealand</span>
+        <span class="tstat__n">22</span>
+        <span class="tstat__lbl">U.S. states</span>
+        <span class="tstat__sub">+ Washington DC, Puerto Rico &amp; New Zealand</span>
       </div>
       <div class="tstat tstat--claim">
         <span class="tstat__kicker">Every cigar</span>
