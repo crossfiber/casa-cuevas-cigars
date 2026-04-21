@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://crossfiber.github.io/casa-cuevas-cigars/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://crossfiber.github.io/casa-cuevas-cigars/img/hero-family.jpg</image:loc>
+      <image:title>Four generations of the Cuevas family at Tabacalera Las Lavas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://crossfiber.github.io/casa-cuevas-cigars/img/og-card.jpg</image:loc>
+      <image:title>Casa Cuevas Cigars — premium Dominican handmade cigars</image:title>
+    </image:image>
+  </url>
+</urlset>
